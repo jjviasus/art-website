@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/art-website/static/js/main.04cdf9c4.js",
+    "static/js/787.02b9bf52.chunk.js": "/art-website/static/js/787.02b9bf52.chunk.js",
+    "index.html": "/art-website/index.html",
+    "main.04cdf9c4.js.map": "/art-website/static/js/main.04cdf9c4.js.map",
+    "787.02b9bf52.chunk.js.map": "/art-website/static/js/787.02b9bf52.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.04cdf9c4.js"
+  ]
+}
