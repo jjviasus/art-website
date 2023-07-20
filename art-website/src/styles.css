@@ -1,0 +1,95 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr; /* First column takes 1 part, second column takes 4 parts */
+  gap: 10px; /* Adjust the gap between columns as needed */
+}
+
+  /* Styles for the text column */
+.text-column {
+  text-align: left;
+  padding-left: 20px;
+}
+
+/* Styles for the Artist Name section */
+.artist-name {
+  color: black;
+  margin-top: 40px;
+}
+
+.black-text {
+  color: black;
+}
+
+.inria-serif {
+  font-family: 'Inria Serif', serif;
+  font-size: 48px;
+}
+
+.kristi {
+  font-family: 'Kristi', cursive;
+  font-size: 36px;
+}
+
+/* Styles for the Categories and Personal sections */
+.categories, .personal {
+  margin-top: 40px;
+}
+
+.gray-text {
+  color: gray;
+}
+
+.abel {
+  font-family: 'Abel', sans-serif;
+  font-size: 24px;
+}
+
+/* Styles for the Socials section */
+.socials {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically in the center */
+  margin-top: 40px;
+}
+
+.social-icon {
+  margin-right: 10px;
+  filter: grayscale(100%); /* To apply grayscale effect to the SVGs */
+}
+
+.images-column {
+  /* Styles for the image column */
+  padding-right: 20px;
+}
+
+/* Change text color to red on hover */
+.categories .row:hover,
+.personal .row:hover,
+.socials .row:hover {
+  color: #5d4343;
+}
+
+/* Change cursor to pointer for clickable rows */
+.categories .row,
+.personal .row,
+.socials .row {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr; /* Display only the second column (images) */
+  }
+
+  .text-column {
+    display: none; /* Hide the first column */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Additional adjustments for smaller screen sizes */
+  .images-column {
+    /* For example, you can set a max-width to limit the image size */
+    max-width: 100%;
+    padding-right: 0; /* Reset padding for smaller screens */
+  }
+}
