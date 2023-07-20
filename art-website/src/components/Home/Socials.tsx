@@ -1,11 +1,16 @@
 import React from "react";
-import facebookIcon from "../assets/facebook.svg";
-import instagramIcon from "../assets/instagram.svg";
-import emailIcon from "../assets/email2.svg";
+import facebookIcon from "../../assets/facebook.svg";
+import instagramIcon from "../../assets/instagram.svg";
+import emailIcon from "../../assets/email2.svg";
 
 export function Socials() {
   const handleSocialClick = (platform: string) => {
     console.log(`Clicked on ${platform} icon!`);
+
+    if (platform === "Email") {
+      // Open the user's default email app and compose an email to dfanara.art@gmail.com
+      window.location.href = "mailto:dfanara.art@gmail.com";
+    }
   };
 
   return (
