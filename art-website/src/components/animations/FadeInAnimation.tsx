@@ -1,4 +1,4 @@
-export function animateOnLoad() {
+export function fadeInAnimation() {
   const images = document.querySelectorAll('.dream img');
 
   const imageObserver = new IntersectionObserver((entries, observer) => {

@@ -1,18 +1,17 @@
-/* Global Reset */
+/* == Global Reset ==  */
 * {
   margin: 0;
-  /*background-color: #fff9df;*/
 }
 
-/* Fonts and Colors */
+/* == Fonts and Colors == */
 :root {
-  --primary-color: #000000; /* Define primary color variable */
-  --secondary-color: #5d4343; /* Define secondary color variable */
+  --black-color: #1a1a1a; /* Define black color variable */
   --gray-color: #808080; /* Define gray color variable */
 
   --font-family-serif: 'Inria Serif', serif; /* Define serif font family */
   --font-family-cursive: 'Kristi', cursive; /* Define cursive font family */
   --font-family-sans-serif: 'Abel', sans-serif; /* Define sans-serif font family */
+  /*background-color: #fff9df;*/
 }
 
 /* Container Styles */
@@ -31,12 +30,12 @@
 
 /* Artist Name Styles */
 .artist-name {
-  color: var(--primary-color);
+  color: var(--black-color);
 }
 
 /* Common Text Styles */
 .black-text {
-  color: var(--primary-color);
+  color: var(--black-color);
 }
 
 .inria-serif {
@@ -53,6 +52,11 @@
 .categories,
 .personal {
   margin-top: 40px;
+}
+
+/* Add this style to highlight the selected category in green */
+.categories .row.selected-category {
+  color: black;
 }
 
 .gray-text {
@@ -76,17 +80,19 @@
   filter: grayscale(100%); /* To apply grayscale effect to the SVGs */
 }
 
-/* Hover and Click Styles */
+/* == Hover and Click Styles == */
 .categories .row:hover,
 .personal .row:hover,
 .socials .row:hover {
-  color: var(--secondary-color);
+  transform: translateX(-5px);
+  transition: transform 0.15s ease;
 }
 
 .categories .row,
 .personal .row,
 .socials .row {
   cursor: pointer;
+  transition: transform 0.5s ease;
 }
 
 .dream img:hover{
@@ -98,21 +104,20 @@
   cursor: pointer;
 }
 
-/* Image Column Styles */
+/* = Image Column Styles == */
 .images-column {
   display: flex;
   flex-direction: row;
-  /*justify-content: space-between;*/
   gap: 10px;
 }
 
-.dream {
+.images-column .dream {
   display: flex;
   flex-direction: column;
   width: 32.5%;
 }
 
-.dream img {
+.images-column .dream img {
   width: 100%;
   margin: 0 0 10px 0;
   border-radius: 3px;
@@ -120,12 +125,12 @@
   transition: opacity 1s ease, transform 0.3s ease;
 }
 
-/* Additional class for animation */
-.dream img.animate {
+/* == Animation == */
+.images-column .dream img.animate {
   opacity: 1; /* Fade the image in to fully opaque */
 }
 
-/* Media Queries */
+/* == Media Queries == */
 @media screen and (max-width: 768px) {
   .images-column {
     flex-direction: column;

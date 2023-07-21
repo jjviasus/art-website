@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-import './styles.css'; // Import the CSS file
+import './styles.css';
 import { HomePage } from './components';
-import { animateOnLoad } from './animation'; // Import the animation function
+import { fadeInAnimation } from './components/animations/FadeInAnimation';
 
 function App() {
   useEffect(() => {
-    animateOnLoad(); // Call the animation function
+    fadeInAnimation();
   }, []);
 
   return <HomePage />;

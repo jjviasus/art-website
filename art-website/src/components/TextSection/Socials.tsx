@@ -1,7 +1,7 @@
 import React from "react";
-import facebookIcon from "../../assets/facebook.svg";
-import instagramIcon from "../../assets/instagram.svg";
-import emailIcon from "../../assets/email2.svg";
+import facebookIcon from "../../assets/icons/facebook.svg";
+import instagramIcon from "../../assets/icons/instagram.svg";
+import emailIcon from "../../assets/icons/email2.svg";
 
 export function Socials() {
   const handleSocialClick = (platform: string) => {

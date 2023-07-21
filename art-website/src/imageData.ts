@@ -1,7 +1,7 @@
-import tulips_in_a_vase from "./assets/tulips_in_a_vase.jpg";
-import sunflower from "./assets/sunflower.jpg.jpg";
-import a_trio_of_vases_with_daisies from "./assets/a_trio_of_vases_with_daisies.jpg";
-import mom from "./assets/mom.jpg";
+import tulips_in_a_vase from "./assets/paintings/tulips_in_a_vase.jpg";
+import sunflower from "./assets/paintings/sunflower.jpg";
+import a_trio_of_vases_with_daisies from "./assets/paintings/a_trio_of_vases_with_daisies.jpg";
+import mom from "./assets/paintings/mom.jpg";
 
 interface ImageData {
   id: number;
@@ -12,7 +12,7 @@ interface ImageData {
   dimensions: string;
 }
 
-const imagesData: ImageData[] = [
+const imageData: ImageData[] = [
     {
         id: 1,
         src: sunflower,
@@ -47,4 +47,4 @@ const imagesData: ImageData[] = [
     }
 ];
 
-export default imagesData;
+export default imageData;
