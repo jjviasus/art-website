@@ -1,16 +1,22 @@
 import React from "react";
 
-export function Personal() {
-  const handlePersonalClick = (section: string) => {
-    console.log(`Clicked on ${section} section!`);
+interface PersonalProps {
+  selectedCategory: string;
+  onSelectCategory: (category: string) => void;
+}
+
+export function Personal({ selectedCategory, onSelectCategory }: PersonalProps) {
+  const handleCategoryClick = (category: string) => {
+    console.log(`Personal ${category} clicked!`);
+    onSelectCategory(category)  // Call the onSelectPersonal function with the selected personal category
   };
 
   return (
     <div className="personal">
-      <div className="row gray-text abel" onClick={() => handlePersonalClick("about")}>
+      <div className={`row gray-text abel ${selectedCategory === "about" ? "selected-category" : ""}`} onClick={() => handleCategoryClick("about")}>
         about
       </div>
-      <div className="row gray-text abel" onClick={() => handlePersonalClick("contact")}>
+      <div className={`row gray-text abel ${selectedCategory === "contact" ? "selected-category" : ""}`} onClick={() => handleCategoryClick("contact")}>
         contact
       </div>
     </div>

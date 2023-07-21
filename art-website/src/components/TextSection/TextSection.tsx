@@ -21,7 +21,10 @@ export function TextSection({ selectedCategory, setSelectedCategory }: TextColum
         selectedCategory={selectedCategory}
         onSelectCategory={handleCategoryClick}
       />
-      <Personal />
+      <Personal
+          selectedCategory={selectedCategory}
+          onSelectCategory={handleCategoryClick}
+      />
       <Socials />
     </div>
   );

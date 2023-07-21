@@ -55,7 +55,7 @@
 }
 
 /* Add this style to highlight the selected category in green */
-.categories .row.selected-category {
+.row.selected-category {
   color: black;
 }
 
@@ -97,7 +97,7 @@
 
 .dream img:hover{
   filter: brightness(90%); /* Darken the image to 80% brightness on hover */
-  transform: scale(1.01); /* Scale the image up to 110% on hover */
+  transform: scale(.99); /* Scale the image up to 110% on hover */
 }
 
 .dream img{
