@@ -1,50 +1,70 @@
-.container {
-  display: grid;
-  grid-template-columns: 1fr 4fr; /* First column takes 1 part, second column takes 4 parts */
-  gap: 10px; /* Adjust the gap between columns as needed */
+/* Global Reset */
+* {
+  margin: 0;
+  /*background-color: #fff9df;*/
 }
 
-  /* Styles for the text column */
+/* Fonts and Colors */
+:root {
+  --primary-color: #000000; /* Define primary color variable */
+  --secondary-color: #5d4343; /* Define secondary color variable */
+  --gray-color: #808080; /* Define gray color variable */
+
+  --font-family-serif: 'Inria Serif', serif; /* Define serif font family */
+  --font-family-cursive: 'Kristi', cursive; /* Define cursive font family */
+  --font-family-sans-serif: 'Abel', sans-serif; /* Define sans-serif font family */
+}
+
+/* Container Styles */
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px; /* Adjust the gap between columns as needed */
+  margin: 40px 40px 0 40px;
+}
+
+/* Text Column Styles */
 .text-column {
   text-align: left;
-  padding-left: 20px;
+  display: inline-block; /* Causes the text-column to shrink to the width of its contents. */
 }
 
-/* Styles for the Artist Name section */
+/* Artist Name Styles */
 .artist-name {
-  color: black;
-  margin-top: 40px;
+  color: var(--primary-color);
 }
 
+/* Common Text Styles */
 .black-text {
-  color: black;
+  color: var(--primary-color);
 }
 
 .inria-serif {
-  font-family: 'Inria Serif', serif;
+  font-family: var(--font-family-serif);
   font-size: 48px;
 }
 
 .kristi {
-  font-family: 'Kristi', cursive;
+  font-family: var(--font-family-cursive);
   font-size: 36px;
 }
 
-/* Styles for the Categories and Personal sections */
-.categories, .personal {
+/* Categories and Personal Sections Styles */
+.categories,
+.personal {
   margin-top: 40px;
 }
 
 .gray-text {
-  color: gray;
+  color: var(--gray-color);
 }
 
 .abel {
-  font-family: 'Abel', sans-serif;
+  font-family: var(--font-family-sans-serif);
   font-size: 24px;
 }
 
-/* Styles for the Socials section */
+/* Socials Section Styles */
 .socials {
   display: flex; /* Use flexbox for layout */
   align-items: center; /* Align items vertically in the center */
@@ -56,28 +76,63 @@
   filter: grayscale(100%); /* To apply grayscale effect to the SVGs */
 }
 
-.images-column {
-  /* Styles for the image column */
-  padding-right: 20px;
-}
-
-/* Change text color to red on hover */
+/* Hover and Click Styles */
 .categories .row:hover,
 .personal .row:hover,
 .socials .row:hover {
-  color: #5d4343;
+  color: var(--secondary-color);
 }
 
-/* Change cursor to pointer for clickable rows */
 .categories .row,
 .personal .row,
 .socials .row {
   cursor: pointer;
 }
 
+.dream img:hover{
+  filter: brightness(90%); /* Darken the image to 80% brightness on hover */
+  transform: scale(1.01); /* Scale the image up to 110% on hover */
+}
+
+.dream img{
+  cursor: pointer;
+}
+
+/* Image Column Styles */
+.images-column {
+  display: flex;
+  flex-direction: row;
+  /*justify-content: space-between;*/
+  gap: 10px;
+}
+
+.dream {
+  display: flex;
+  flex-direction: column;
+  width: 32.5%;
+}
+
+.dream img {
+  width: 100%;
+  margin: 0 0 10px 0;
+  border-radius: 3px;
+  opacity: 0;
+  transition: opacity 1s ease, transform 0.3s ease;
+}
+
+/* Additional class for animation */
+.dream img.animate {
+  opacity: 1; /* Fade the image in to fully opaque */
+}
+
+/* Media Queries */
 @media screen and (max-width: 768px) {
-  .container {
-    grid-template-columns: 1fr; /* Display only the second column (images) */
+  .images-column {
+    flex-direction: column;
+  }
+
+  .images-column .dream {
+    width: 100%;
   }
 
   .text-column {
