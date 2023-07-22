@@ -7,7 +7,16 @@ interface IndividualPaintingProps {
 
 function IndividualPainting({painting}: IndividualPaintingProps) {
     return (
-        <div>{painting.alt}</div>
+        <div className="individual-image-column">
+            <div className="painting-container">
+                <div className="title inria-serif-bold">{painting.alt}</div>
+                <img className="painting-image" src={painting.src} alt="" key=""/>
+                <div className="info-purchase">
+                    <div className="inria-serif-light">{painting.dimensions}, {painting.surface_material}, {painting.medium}, 2023</div>
+                    <div className="inria-serif-bold purchase">purchase</div>
+                </div>
+            </div>
+        </div>
     );
 }
 

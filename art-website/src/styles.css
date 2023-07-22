@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: row;
   gap: 40px; /* Adjust the gap between columns as needed */
-  margin: 40px 40px 0 40px;
+  margin: 40px 40px 40px 40px;
 }
 
 /* Text Column Styles */
@@ -43,9 +43,26 @@
   font-size: 48px;
 }
 
+.inria-serif-bold {
+  font-family: var(--font-family-serif);
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.inria-serif-light {
+  font-family: var(--font-family-serif);
+  font-size: 16px;
+  font-weight: lighter;
+}
+
 .kristi {
   font-family: var(--font-family-cursive);
   font-size: 36px;
+}
+
+/* Purchase Font Size */
+.purchase {
+  font-size: 24px;
 }
 
 /* Categories and Personal Sections Styles */
@@ -104,7 +121,7 @@
   cursor: pointer;
 }
 
-/* = Image Column Styles == */
+/* == Images Column Styles == */
 .images-column {
   display: flex;
   flex-direction: row;
@@ -114,7 +131,7 @@
 .images-column .dream {
   display: flex;
   flex-direction: column;
-  width: 32.5%;
+  width: 100%; /* 32.5% or 100% */
 }
 
 .images-column .dream img {
@@ -125,6 +142,35 @@
   transition: opacity 1s ease, transform 0.3s ease;
 }
 
+/* == Individual Image Column Styles == */
+.individual-image-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* This ensures it doesn't go off the screen considering the gap */
+}
+
+.individual-image-column .painting-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.individual-image-column .painting-container .title {
+  text-align: left;
+}
+
+.individual-image-column .painting-container .painting-image {
+  max-width: 100%;
+  max-height: calc(100vh - 184px); /* Considering margins and padding for container */
+  object-fit: contain;
+}
+
+.individual-image-column .painting-container .info-purchase {
+  display: flex;
+  justify-content: space-between; /* Align the info and purchase to opposite ends */
+  align-items: center; /* Center the items horizontally */
+}
+
 /* == Animation == */
 .images-column .dream img.animate {
   opacity: 1; /* Fade the image in to fully opaque */
@@ -132,6 +178,12 @@
 
 /* == Media Queries == */
 @media screen and (max-width: 768px) {
+  .painting-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    /*height: calc(100vh - 17px); !* Considering margins and padding for container *!*/
+  }
+
   .images-column {
     flex-direction: column;
   }
