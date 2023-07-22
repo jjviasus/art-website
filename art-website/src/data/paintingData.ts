@@ -1,13 +1,13 @@
-import tulips_in_a_vase from "./assets/paintings/tulips_in_a_vase.jpg";
-import sunflower from "./assets/paintings/sunflower.jpg";
-import a_trio_of_vases_with_daisies from "./assets/paintings/a_trio_of_vases_with_daisies.jpg";
-import mom from "./assets/paintings/mom.jpg";
-import ensemble from "./assets/paintings/ensemble.jpg";
-import my_cup_of_tea from "./assets/paintings/my_cup_of_tea.jpg";
-import best_buddy from "./assets/paintings/best_buddy.jpg";
-import lobster_man from "./assets/paintings/lobster_man.jpg";
+import tulips_in_a_vase from "../assets/paintings/tulips_in_a_vase.jpg";
+import sunflower from "../assets/paintings/sunflower.jpg";
+import a_trio_of_vases_with_daisies from "../assets/paintings/a_trio_of_vases_with_daisies.jpg";
+import mom from "../assets/paintings/mom.jpg";
+import ensemble from "../assets/paintings/ensemble.jpg";
+import my_cup_of_tea from "../assets/paintings/my_cup_of_tea.jpg";
+import best_buddy from "../assets/paintings/best_buddy.jpg";
+import lobster_man from "../assets/paintings/lobster_man.jpg";
 
-export interface ImageData {
+export interface PaintingData {
   id: number;
   src: string;
   alt: string;
@@ -16,7 +16,7 @@ export interface ImageData {
   dimensions: string;
 }
 
-const imageData: ImageData[] = [
+const imageData: PaintingData[] = [
     {
         id: 1,
         src: sunflower,

@@ -5,7 +5,7 @@ import { fadeInAnimation } from './components/animations/FadeInAnimation';
 
 function App() {
   useEffect(() => {
-    fadeInAnimation();
+    fadeInAnimation({selectors: '.dream img'});
   }, []);
 
   return <HomePage />;

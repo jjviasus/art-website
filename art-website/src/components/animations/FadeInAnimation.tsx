@@ -1,5 +1,9 @@
-export function fadeInAnimation() {
-  const images = document.querySelectorAll('.dream img');
+interface Props {
+  selectors: string
+}
+
+export function fadeInAnimation({selectors}: Props) {
+  const images = document.querySelectorAll(selectors);
 
   const imageObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {

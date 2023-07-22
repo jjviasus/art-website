@@ -2,6 +2,8 @@ import React, {useState, useEffect} from "react";
 import {TextSection} from "./TextSection/TextSection";
 import {Paintings} from "./PaintingsSection/Paintings";
 import {fadeInAnimation} from "./animations/FadeInAnimation";
+import {PaintingData} from "../data/paintingData";
+import IndividualPainting from "./PaintingsSection/IndividualPainting";
 
 export function About() {
     return (<div>About</div>)
@@ -12,11 +14,17 @@ export function Contact() {
 }
 
 export function HomePage() {
-    const [selectedCategory, setSelectedCategory] = useState("all"); // Set the initial category to "all"
+    const [selectedCategory, setSelectedCategory] = useState("all"); // Initial "all"
+    const [selectedPainting, setSelectedPainting] = useState<PaintingData | null>(null); // Initial null
 
     useEffect(() => {
-        fadeInAnimation(); // Call the fadeInAnimation() function when the Paintings component is displayed
+        setSelectedPainting(null)
+        fadeInAnimation({selectors: '.dream img'});
     }, [selectedCategory]);
+
+    useEffect(() => {
+        fadeInAnimation({selectors: '.dream img'});
+    }, [selectedPainting]);
 
     return (
         <div className="container">
@@ -28,8 +36,13 @@ export function HomePage() {
                 <About/>
             ) : selectedCategory === "contact" ? (
                 <Contact/>
+            ) : selectedPainting ? (
+                <IndividualPainting painting={selectedPainting}/>
             ) : (
-                <Paintings selectedCategory={selectedCategory}/>
+                <Paintings
+                    selectedCategory={selectedCategory}
+                    setSelectedPainting={setSelectedPainting}
+                />
             )}
         </div>
     );
