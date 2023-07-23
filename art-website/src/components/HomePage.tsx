@@ -27,16 +27,21 @@ export function HomePage() {
     }, [selectedPainting]);
 
     const handleCategoryClick = (category: string) => {
-      if (category === selectedCategory) {
-        setSelectedPainting(null)
-        fadeInAnimation({selectors: '.dream img'});
-      } else {
-        setSelectedCategory(category);
-      }
+        if (category === selectedCategory) {
+            setSelectedPainting(null)
+            fadeInAnimation({selectors: '.dream img'});
+        } else {
+            setSelectedCategory(category);
+        }
     }
 
     return (
         <div className="container">
+            <div className="header artist-name">
+                <div className="black-text inria-serif">Deborah</div>
+                <div className="black-text inria-serif">Fanara</div>
+                <div className="smaller-text kristi">art</div>
+            </div>
             <TextSection
                 setSelectedCategory={handleCategoryClick}
                 selectedCategory={selectedCategory}
