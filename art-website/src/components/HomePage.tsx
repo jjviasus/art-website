@@ -26,10 +26,19 @@ export function HomePage() {
         fadeInAnimation({selectors: '.dream img'});
     }, [selectedPainting]);
 
+    const handleCategoryClick = (category: string) => {
+      if (category === selectedCategory) {
+        setSelectedPainting(null)
+        fadeInAnimation({selectors: '.dream img'});
+      } else {
+        setSelectedCategory(category);
+      }
+    }
+
     return (
         <div className="container">
             <TextSection
-                setSelectedCategory={setSelectedCategory}
+                setSelectedCategory={handleCategoryClick}
                 selectedCategory={selectedCategory}
             />
             {selectedCategory === "about" ? (
