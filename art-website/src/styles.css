@@ -1,6 +1,7 @@
 /* == Global Reset ==  */
 * {
   margin: 0;
+  padding: 0;
 }
 
 /* == Fonts and Colors == */
@@ -14,6 +15,18 @@
   --font-family-sans-serif: 'Abel', sans-serif; /* Define sans-serif font family */
   /*background-color: #fff9df;*/
 }
+
+/*body::-webkit-scrollbar {*/
+/*  width: 0.25rem;*/
+/*}*/
+
+/*body::-webkit-scrollbar-track {*/
+/*  background: #c2efff;*/
+/*}*/
+
+/*body::-webkit-scrollbar-thumb {*/
+/*  background: var(--black-color);*/
+/*}*/
 
 /* Container Styles */
 .container {
@@ -185,6 +198,81 @@
   align-items: center; /* Center the items horizontally */
 }
 
+/* == Hamburger Styles == */
+.hamburger {
+  width: 24px;
+  height: 24px;
+  margin-left: auto;
+}
+
+/* == Close Icon Styles == */
+.closeIcon {
+  width: 24px;
+  height: 24px;
+}
+
+/* == Nav Bar Styles == */
+.nav-bar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 2;
+  transition: right 0.3s ease-in-out;
+}
+
+.nav-bar.open {
+  right: 0;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.nav-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.nav-item {
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.nav-item:hover {
+  background-color: #f1f1f1;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+/* == Scroll Bar Behavior When NavBar is open == */
+/* Hide the scrollbar on the whole page */
+body.no-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Optional: To ensure the scroll position doesn't jump when scrollbar is hidden */
+.no-scroll {
+  margin-right: calc(100% - 100vw);
+}
+
+/* For Firefox (if needed) */
+body.no-scroll {
+  overflow: hidden;
+}
+
 /* == Animation == */
 .images-column .dream img.animate {
   opacity: 1; /* Fade the image in to fully opaque */
@@ -193,6 +281,12 @@
 /* == Media Queries == */
 @media screen and (max-width: 768px) {
   /* Apply these when the screen size is below 768px */
+
+  .container {
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 10px 0 10px;
+  }
 
   .header {
     display: flex; /* Show the header */
@@ -213,12 +307,6 @@
 
   .kristi {
     font-size: 28px;
-  }
-
-  .container {
-    flex-direction: column;
-    gap: 10px;
-    margin: 10px 10px 0 10px;
   }
 
   .painting-container {
