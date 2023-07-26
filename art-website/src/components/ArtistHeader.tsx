@@ -5,7 +5,7 @@ interface HeaderProps {
     handleHamburgerClick: () => void;
 }
 
-export function Header({handleHamburgerClick}: HeaderProps) {
+export function ArtistHeader({handleHamburgerClick}: HeaderProps) {
     return (
         <div className="header">
             <div className="artist-name black-text inria-serif">Deborah</div>

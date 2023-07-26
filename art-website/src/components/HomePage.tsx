@@ -5,7 +5,7 @@ import {fadeInAnimation} from "./animations/FadeInAnimation";
 import {PaintingData} from "../data/paintingData";
 import IndividualPainting from "./PaintingsSection/IndividualPainting";
 import {NavBar} from "./NavBar";
-import {Header} from "./Header";
+import {ArtistHeader} from "./ArtistHeader";
 
 
 export function About() {
@@ -62,7 +62,7 @@ export function HomePage() {
 
     return (
         <div className="container">
-            <Header handleHamburgerClick={handleHamburgerClick}/>
+            <ArtistHeader handleHamburgerClick={handleHamburgerClick}/>
             <NavBar
                 isOpen={isNavOpen}
                 onClose={() => setIsNavOpen(false)}

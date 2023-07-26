@@ -16,18 +16,6 @@
   /*background-color: #fff9df;*/
 }
 
-/*body::-webkit-scrollbar {*/
-/*  width: 0.25rem;*/
-/*}*/
-
-/*body::-webkit-scrollbar-track {*/
-/*  background: #c2efff;*/
-/*}*/
-
-/*body::-webkit-scrollbar-thumb {*/
-/*  background: var(--black-color);*/
-/*}*/
-
 /* Container Styles */
 .container {
   display: flex;
@@ -90,7 +78,6 @@
   margin-top: 40px;
 }
 
-/* Add this style to highlight the selected category in green */
 .row.selected-category {
   color: black;
 }
@@ -205,71 +192,8 @@
   margin-left: auto;
 }
 
-/* == Close Icon Styles == */
-.closeIcon {
-  width: 24px;
-  height: 24px;
-}
-
-/* == Nav Bar Styles == */
-.nav-bar {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  z-index: 2;
-  transition: right 0.3s ease-in-out;
-}
-
-.nav-bar.open {
-  right: 0;
-}
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-}
-
-.nav-items {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
-.nav-item {
-  font-size: 24px;
-  padding: 10px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.nav-item:hover {
-  background-color: #f1f1f1;
-}
-
+/* When the nav bar is open we don't want the user to be able to scroll */
 .no-scroll {
-  overflow: hidden;
-}
-
-/* == Scroll Bar Behavior When NavBar is open == */
-/* Hide the scrollbar on the whole page */
-body.no-scroll::-webkit-scrollbar {
-  display: none;
-}
-
-/* Optional: To ensure the scroll position doesn't jump when scrollbar is hidden */
-.no-scroll {
-  margin-right: calc(100% - 100vw);
-}
-
-/* For Firefox (if needed) */
-body.no-scroll {
   overflow: hidden;
 }
 

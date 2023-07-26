@@ -1,5 +1,6 @@
 import closeIcon from "../assets/icons/times-solid.svg";
 import React from "react";
+import "../styles/NavBar.css"
 
 interface NavBarProps {
     isOpen: boolean;
