@@ -1,0 +1,30 @@
+/* == Artist Header CSS == */
+
+/* Hide the header by default */
+.artist-header {
+    display: none;
+}
+
+/* Hamburger Styles */
+.hamburger {
+    width: 24px;
+    height: 24px;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+/* Media Queries */
+@media screen and (max-width: 576px) {
+    /* Apply these when the screen size is below 576px */
+    .artist-header {
+        display: flex; /* Show the header */
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        position: sticky;
+        top: 0;
+        background-color: rgba(255, 255, 255, 0.9); /* Fully white color (255, 255, 255) with 90% transparency (0.9) */
+        z-index: 1; /* Ensure the header stays on top of other content */
+    }
+}

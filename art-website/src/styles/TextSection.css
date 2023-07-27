@@ -1,0 +1,15 @@
+/* == TextSection CSS */
+
+/* Text Column Styles */
+.text-column {
+    text-align: left;
+    display: inline-block; /* Causes the text-column to shrink to the width of its contents. */
+}
+
+/* == Media Queries == */
+@media screen and (max-width: 576px) {
+    /* Apply these when the screen size is below 576px */
+    .text-column {
+        display: none; /* Hide it */
+    }
+}

@@ -1,110 +1,93 @@
 /* == Global Reset ==  */
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 /* == Fonts and Colors == */
 :root {
-  --black-color: #1a1a1a; /* Define black color variable */
-  --gray-color: #808080; /* Define gray color variable */
-  --dark-gray-color: #363636;
+    --black-color: #1a1a1a;
+    --gray-color: #808080;
+    --dark-gray-color: #363636;
 
-  --font-family-serif: 'Inria Serif', serif; /* Define serif font family */
-  --font-family-cursive: 'Kristi', cursive; /* Define cursive font family */
-  --font-family-sans-serif: 'Abel', sans-serif; /* Define sans-serif font family */
-  /*background-color: #fff9df;*/
-}
-
-/* Container Styles */
-.container {
-  display: flex;
-  flex-direction: row;
-  gap: 40px; /* Adjust the gap between columns as needed */
-  margin: 40px 40px 40px 40px;
-}
-
-/* Hide the header by default */
-.header {
-  display: none;
-}
-
-/* Text Column Styles */
-.text-column {
-  text-align: left;
-  display: inline-block; /* Causes the text-column to shrink to the width of its contents. */
-}
-
-/* Artist Name Styles */
-.artist-name {
-  color: var(--black-color);
+    --font-family-serif: 'Inria Serif', serif;
+    --font-family-cursive: 'Kristi', cursive;
+    --font-family-sans-serif: 'Abel', sans-serif;
+    /*background-color: #fff9df;*/
 }
 
 /* Common Text Styles */
 .black-text {
-  color: var(--black-color);
+    color: var(--black-color);
+}
+
+.gray-text {
+    color: var(--gray-color);
+}
+
+.dark-gray-text {
+    color: var(--dark-gray-color);
+}
+
+.abel {
+    font-family: var(--font-family-sans-serif);
+    font-size: 24px;
 }
 
 .inria-serif {
-  font-family: var(--font-family-serif);
-  font-size: 48px;
+    font-family: var(--font-family-serif);
+    font-size: 48px;
 }
 
 .inria-serif-bold {
-  font-family: var(--font-family-serif);
-  font-size: 48px;
-  font-weight: bold;
+    font-family: var(--font-family-serif);
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.inria-serif-bold-sm {
+    font-family: var(--font-family-serif);
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .inria-serif-light {
-  font-family: var(--font-family-serif);
-  font-size: 16px;
-  font-weight: lighter;
+    font-family: var(--font-family-serif);
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+.inria-serif-light-sm {
+    font-family: var(--font-family-serif);
+    font-size: 12px;
+    font-weight: lighter;
 }
 
 .kristi {
-  font-family: var(--font-family-cursive);
-  font-size: 36px;
+    font-family: var(--font-family-cursive);
+    font-size: 36px;
 }
-
-/* Purchase Font Size */
-/*.purchase {*/
-/*  font-size: 24px;*/
-/*}*/
 
 /* Categories and Personal Sections Styles */
 .categories,
 .personal {
-  margin-top: 40px;
+    margin-top: 40px;
 }
 
 .row.selected-category {
-  color: black;
-}
-
-.gray-text {
-  color: var(--gray-color);
-}
-
-.dark-gray-text {
-  color: var(--dark-gray-color);
-}
-
-.abel {
-  font-family: var(--font-family-sans-serif);
-  font-size: 24px;
+    color: black;
 }
 
 /* Socials Section Styles */
 .socials {
-  display: flex; /* Use flexbox for layout */
-  align-items: center; /* Align items vertically in the center */
-  margin-top: 40px;
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically in the center */
+    margin-top: 40px;
 }
 
 .social-icon {
-  margin-right: 10px;
-  filter: grayscale(100%); /* To apply grayscale effect to the SVGs */
+    margin-right: 10px;
+    filter: grayscale(100%); /* To apply grayscale effect to the SVGs */
 }
 
 /* == Hover and Click Styles == */
@@ -112,153 +95,141 @@
 .personal .row:hover,
 .socials .row:hover,
 .purchase:hover {
-  transform: translateX(-5px);
-  transition: transform 0.15s ease;
+    transform: translateX(-5px);
+    transition: transform 0.15s ease;
 }
 
 .categories .row,
 .personal .row,
 .socials .row,
 .purchase {
-  cursor: pointer;
-  transition: transform 0.5s ease;
+    cursor: pointer;
+    transition: transform 0.5s ease;
 }
 
-.dream img:hover{
-  filter: brightness(90%); /* Darken the image to 80% brightness on hover */
-  transform: scale(.99); /* Scale the image up to 110% on hover */
+.dream img:hover {
+    filter: brightness(90%); /* Darken the image to 80% brightness on hover */
+    transform: scale(.99); /* Scale the image up to 110% on hover */
 }
 
-.dream img{
-  cursor: pointer;
+.dream img {
+    cursor: pointer;
 }
 
 /* == Images Column Styles == */
 .images-column {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
 
 .images-column .dream {
-  display: flex;
-  flex-direction: column;
-  width: 100%; /* 32.5% or 100% */
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* 32.5% or 100% */
 }
 
 .images-column .dream img {
-  width: 100%;
-  margin: 0 0 10px 0;
-  border-radius: 3px;
-  opacity: 0;
-  transition: opacity 1s ease, transform 0.3s ease;
+    width: 100%;
+    margin: 0 0 10px 0;
+    border-radius: 3px;
+    opacity: 0;
+    transition: opacity 1s ease, transform 0.3s ease;
+}
+
+.images-column .dream .dream-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 0;
+}
+
+.dream-title-mobile,
+.dream-info-mobile {
+    display: none;
 }
 
 /* == Individual Image Column Styles == */
 .individual-image-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%; /* This ensures it doesn't go off the screen considering the gap */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* This ensures it doesn't go off the screen considering the gap */
 }
 
 .individual-image-column .painting-container {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .individual-image-column .painting-container .title {
-  text-align: left;
+    text-align: left;
 }
 
 .individual-image-column .painting-container .painting-image {
-  max-width: 100%;
-  height: 100vh;
-  max-height: calc(100vh - 168px); /* Considering margins and padding for container */
-  object-fit: contain;
+    max-width: 100%;
+    height: 100vh;
+    max-height: calc(100vh - 168px); /* Considering margins and padding for container */
+    object-fit: contain;
 }
 
 .individual-image-column .painting-container .info-purchase {
-  display: flex;
-  justify-content: space-between; /* Align the info and purchase to opposite ends */
-  align-items: center; /* Center the items horizontally */
-}
-
-/* == Hamburger Styles == */
-.hamburger {
-  width: 24px;
-  height: 24px;
-  margin-left: auto;
-}
-
-/* When the nav bar is open we don't want the user to be able to scroll */
-.no-scroll {
-  overflow: hidden;
+    display: flex;
+    justify-content: space-between; /* Align the info and purchase to opposite ends */
+    align-items: center; /* Center the items horizontally */
 }
 
 /* == Animation == */
 .images-column .dream img.animate {
-  opacity: 1; /* Fade the image in to fully opaque */
+    opacity: 1; /* Fade the image in to fully opaque */
 }
 
 /* == Media Queries == */
-@media screen and (max-width: 768px) {
-  /* Apply these when the screen size is below 768px */
+@media screen and (max-width: 576px) {
+    /* Apply these when the screen size is below 768px */
+    .inria-serif {
+        font-size: 28px;
+    }
 
-  .container {
-    flex-direction: column;
-    gap: 10px;
-    margin: 10px 10px 0 10px;
-  }
+    .kristi {
+        font-size: 28px;
+    }
 
-  .header {
-    display: flex; /* Show the header */
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-    position: sticky;
-    top: 0;
-    /*background-color: white; !* Add any background color you want for the sticky header *!*/
-    background-color: rgba(255, 255, 255, 0.9); /* Fully white color (255, 255, 255) with 80% transparency (0.2) */
-    z-index: 1; /* Ensure the header stays on top of other content */
-  }
+    .dream-title-mobile,
+    .dream-info-mobile {
+        display: block;
+    }
 
-  .inria-serif {
-    font-size: 28px;
-  }
+    .dream-info-mobile {
+        margin-bottom: 24px;
+    }
 
-  .kristi {
-    font-size: 28px;
-  }
+    .painting-container {
+        height: 100vh;
+        max-height: calc(100vh - 168px); /* Considering margins and padding for container */
+        /*display: flex;*/
+        /*justify-content: center; !* Center horizontally *!*/
+    }
 
-  .painting-container {
-    height: 100vh;
-    max-height: calc(100vh - 168px); /* Considering margins and padding for container */
-    /*display: flex;*/
-    /*justify-content: center; !* Center horizontally *!*/
-  }
+    .images-column {
+        flex-direction: column;
+        gap: 0;
+    }
 
-  .images-column {
-    flex-direction: column;
-    gap: 0;
-  }
+    .images-column .dream {
+        width: 100%;
+    }
 
-  .images-column .dream {
-    width: 100%;
-  }
-
-  .text-column {
-    display: none; /* Hide it */
-  }
+    .images-column .dream img {
+      margin: 0 0 0 0;
+    }
 }
 
 @media screen and (max-width: 480px) {
-  /* Additional adjustments for smaller screen sizes */
-  .images-column {
-    /* For example, you can set a max-width to limit the image size */
-    max-width: 100%;
-    padding-right: 0; /* Reset padding for smaller screens */
-  }
+    /* Additional adjustments for smaller screen sizes */
+    .images-column {
+        /* For example, you can set a max-width to limit the image size */
+        max-width: 100%;
+        padding-right: 0; /* Reset padding for smaller screens */
+    }
 }

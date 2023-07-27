@@ -29,7 +29,11 @@ export function Paintings({selectedCategory, setSelectedPainting}: ImagesColumnP
             {columns.map((column, columnIndex) => (
                 <div className="dream" key={columnIndex}>
                     {column.map((image) => (
-                        <img src={image.src} alt={image.alt} key={image.id} onClick={() => handlePaintingClick(image)}/>
+                        <div className="dream-content">
+                            <img src={image.src} alt={image.alt} key={image.id} onClick={() => handlePaintingClick(image)}/>
+                            <div className="dream-title-mobile inria-serif-bold-sm black-text">{image.alt}</div>
+                            <div className="dream-info-mobile inria-serif-light-sm dark-gray-text">{image.dimensions}, {image.surface_material}, {image.medium}, 2023</div>
+                        </div>
                     ))}
                 </div>
             ))}

@@ -1,4 +1,6 @@
-/* == Nav Bar Styles == */
+/* == Nav Bar CSS == */
+
+/* Nav Bar Styles */
 .nav-bar {
   position: fixed;
   top: 0;
@@ -40,7 +42,7 @@
   background-color: #f1f1f1;
 }
 
-/* == Close Icon Styles == */
+/* Close Icon Styles */
 .closeIcon {
   width: 24px;
   height: 24px;

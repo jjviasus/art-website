@@ -1,5 +1,6 @@
 import hamburger from "../assets/icons/bars-solid.svg";
 import React from "react";
+import '../styles/ArtistHeader.css';
 
 interface HeaderProps {
     handleHamburgerClick: () => void;
@@ -7,10 +8,10 @@ interface HeaderProps {
 
 export function ArtistHeader({handleHamburgerClick}: HeaderProps) {
     return (
-        <div className="header">
-            <div className="artist-name black-text inria-serif">Deborah</div>
-            <div className="artist-name black-text inria-serif">Fanara</div>
-            <div className="artist-name smaller-text kristi">art</div>
+        <div className="artist-header">
+            <div className="black-text inria-serif">Deborah</div>
+            <div className="black-text inria-serif">Fanara</div>
+            <div className="black-text smaller-text kristi">art</div>
             <img
                 className="hamburger"
                 src={hamburger}

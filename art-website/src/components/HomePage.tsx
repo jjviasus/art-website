@@ -6,6 +6,7 @@ import {PaintingData} from "../data/paintingData";
 import IndividualPainting from "./PaintingsSection/IndividualPainting";
 import {NavBar} from "./NavBar";
 import {ArtistHeader} from "./ArtistHeader";
+import "../styles/HomePage.css"
 
 
 export function About() {

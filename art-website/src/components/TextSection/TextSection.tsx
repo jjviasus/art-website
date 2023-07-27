@@ -3,6 +3,7 @@ import { Categories } from "./Categories";
 import { Personal } from "./Personal";
 import { Socials } from "./Socials";
 import React from "react";
+import '../../styles/TextSection.css';
 
 interface TextColumnProps {
     selectedCategory: string;
