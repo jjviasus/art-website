@@ -1,0 +1,40 @@
+/* == Individual Image Column Styles == */
+.individual-image-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* This ensures it doesn't go off the screen considering the gap */
+}
+
+.individual-image-column .painting-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.individual-image-column .painting-container .title {
+    text-align: left;
+}
+
+.individual-image-column .painting-container .painting-image {
+    max-width: 100%;
+    height: 100vh;
+    max-height: calc(100vh - 168px); /* Considering margins and padding for container */
+    object-fit: contain;
+}
+
+.individual-image-column .painting-container .info-purchase {
+    display: flex;
+    justify-content: space-between; /* Align the info and purchase to opposite ends */
+    align-items: center; /* Center the items horizontally */
+}
+
+@media screen and (max-width: 576px) {
+    /* Apply these when the screen size is below 768px */
+    .painting-container {
+        height: 100vh;
+        max-height: calc(100vh - 168px); /* Considering margins and padding for container */
+        /*display: flex;*/
+        /*justify-content: center; !* Center horizontally *!*/
+    }
+}

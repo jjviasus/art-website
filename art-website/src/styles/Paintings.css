@@ -1,0 +1,76 @@
+/* == Paintings CSS == */
+
+.dream img:hover {
+    filter: brightness(90%); /* Darken the image to 80% brightness on hover */
+    transform: scale(.99); /* Scale the image up to 110% on hover */
+}
+
+.dream img {
+    cursor: pointer;
+}
+
+.images-column {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.images-column .dream {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* 32.5% or 100% */
+}
+
+.images-column .dream img {
+    width: 100%;
+    margin: 0 0 10px 0;
+    border-radius: 3px;
+    opacity: 0;
+    transition: opacity 1s ease, transform 0.3s ease;
+}
+
+.images-column .dream .dream-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 0;
+}
+
+.dream-title-mobile,
+.dream-info-mobile {
+    display: none;
+}
+
+/* == Animation == */
+.images-column .dream img.animate {
+    opacity: 1; /* Fade the image in to fully opaque */
+}
+
+/* Media Queries */
+@media screen and (max-width: 576px) {
+    /* Apply these when the screen size is below 768px */
+    .dream-title-mobile,
+    .dream-info-mobile {
+        display: block;
+    }
+
+    .dream-info-mobile {
+        margin-bottom: 24px;
+    }
+
+    .images-column {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .images-column .dream .dream-content img {
+        pointer-events: none; /* Disable pointer events on the img element */
+    }
+
+    .images-column .dream {
+        width: 100%;
+    }
+
+    .images-column .dream img {
+      margin: 0 0 0 0;
+    }
+}

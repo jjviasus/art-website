@@ -1,5 +1,6 @@
 import React from "react";
 import imageData, {PaintingData} from "../../data/paintingData";
+import '../../styles/Paintings.css';
 
 interface ImagesColumnProps {
     selectedCategory: string;
@@ -32,7 +33,7 @@ export function Paintings({selectedCategory, setSelectedPainting}: ImagesColumnP
                         <div className="dream-content">
                             <img src={image.src} alt={image.alt} key={image.id} onClick={() => handlePaintingClick(image)}/>
                             <div className="dream-title-mobile inria-serif-bold-sm black-text">{image.alt}</div>
-                            <div className="dream-info-mobile inria-serif-light-sm dark-gray-text">{image.dimensions}, {image.surface_material}, {image.medium}, 2023</div>
+                            <div className="dream-info-mobile inria-serif-light-sm dark-gray-text">{image.dimensions}, {image.medium}, {image.surface_material}, {image.year}</div>
                         </div>
                     ))}
                 </div>

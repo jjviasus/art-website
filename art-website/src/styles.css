@@ -107,83 +107,6 @@
     transition: transform 0.5s ease;
 }
 
-.dream img:hover {
-    filter: brightness(90%); /* Darken the image to 80% brightness on hover */
-    transform: scale(.99); /* Scale the image up to 110% on hover */
-}
-
-.dream img {
-    cursor: pointer;
-}
-
-/* == Images Column Styles == */
-.images-column {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-}
-
-.images-column .dream {
-    display: flex;
-    flex-direction: column;
-    width: 100%; /* 32.5% or 100% */
-}
-
-.images-column .dream img {
-    width: 100%;
-    margin: 0 0 10px 0;
-    border-radius: 3px;
-    opacity: 0;
-    transition: opacity 1s ease, transform 0.3s ease;
-}
-
-.images-column .dream .dream-content {
-    display: flex;
-    flex-direction: column;
-    margin: 0 0 0 0;
-}
-
-.dream-title-mobile,
-.dream-info-mobile {
-    display: none;
-}
-
-/* == Individual Image Column Styles == */
-.individual-image-column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%; /* This ensures it doesn't go off the screen considering the gap */
-}
-
-.individual-image-column .painting-container {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.individual-image-column .painting-container .title {
-    text-align: left;
-}
-
-.individual-image-column .painting-container .painting-image {
-    max-width: 100%;
-    height: 100vh;
-    max-height: calc(100vh - 168px); /* Considering margins and padding for container */
-    object-fit: contain;
-}
-
-.individual-image-column .painting-container .info-purchase {
-    display: flex;
-    justify-content: space-between; /* Align the info and purchase to opposite ends */
-    align-items: center; /* Center the items horizontally */
-}
-
-/* == Animation == */
-.images-column .dream img.animate {
-    opacity: 1; /* Fade the image in to fully opaque */
-}
-
 /* == Media Queries == */
 @media screen and (max-width: 576px) {
     /* Apply these when the screen size is below 768px */
@@ -193,43 +116,5 @@
 
     .kristi {
         font-size: 28px;
-    }
-
-    .dream-title-mobile,
-    .dream-info-mobile {
-        display: block;
-    }
-
-    .dream-info-mobile {
-        margin-bottom: 24px;
-    }
-
-    .painting-container {
-        height: 100vh;
-        max-height: calc(100vh - 168px); /* Considering margins and padding for container */
-        /*display: flex;*/
-        /*justify-content: center; !* Center horizontally *!*/
-    }
-
-    .images-column {
-        flex-direction: column;
-        gap: 0;
-    }
-
-    .images-column .dream {
-        width: 100%;
-    }
-
-    .images-column .dream img {
-      margin: 0 0 0 0;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    /* Additional adjustments for smaller screen sizes */
-    .images-column {
-        /* For example, you can set a max-width to limit the image size */
-        max-width: 100%;
-        padding-right: 0; /* Reset padding for smaller screens */
     }
 }
