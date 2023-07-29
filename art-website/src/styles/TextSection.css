@@ -4,6 +4,10 @@
 .text-column {
     text-align: left;
     display: inline-block; /* Causes the text-column to shrink to the width of its contents. */
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    bottom: 0;
 }
 
 /* == Media Queries == */

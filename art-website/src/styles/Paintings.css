@@ -13,6 +13,7 @@
     display: flex;
     flex-direction: row;
     gap: 10px;
+    margin-left: 220px;
 }
 
 .images-column .dream {
@@ -60,6 +61,7 @@
     .images-column {
         flex-direction: column;
         gap: 0;
+        margin-left: 0;
     }
 
     .images-column .dream .dream-content img {
