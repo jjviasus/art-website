@@ -11,25 +11,32 @@
     --dark-gray-color: #363636;
     --scotch-mist-color: #fff9df;
     --dull-purple-color: #7f576a;
+
     --mirage-color: #201520;
+    --dawn-pink-color: #F1EBED;
+    --purplish-gray-color: #7B6D7B;
+    --brown-sugar-color: #EB9D6B;
 
     --font-family-serif: 'Inria Serif', serif;
     --font-family-cursive: 'Kristi', cursive;
     --font-family-sans-serif: 'Abel', sans-serif;
-    /*background-color: #201520;*/
+    background-color: #F1EBED;
 }
 
 /* Common Text Styles */
 .black-text {
-    color: var(--black-color);
+    /*color: var(--black-color);*/
+    color: #3e2e33;
 }
 
 .gray-text {
-    color: var(--gray-color);
+    /*color: var(--gray-color);*/
+    color: var(--purplish-gray-color);
 }
 
 .dark-gray-text {
-    color: var(--dark-gray-color);
+    /*color: var(--dark-gray-color);*/
+    color: var(--purplish-gray-color);
 }
 
 .abel {
@@ -78,7 +85,7 @@
 }
 
 .row.selected-category {
-    color: black;
+    color: var(--mirage-color);
 }
 
 /* Socials Section Styles */

@@ -28,7 +28,7 @@
     border-radius: 3px;
     opacity: 0;
     transition: opacity 1s ease, transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .images-column .dream .dream-content {
@@ -65,6 +65,10 @@
         margin-left: 0;
     }
 
+    .images-column .dream .dream-content {
+        margin: 0 16px 0 16px;
+    }
+
     .images-column .dream .dream-content img {
         pointer-events: none; /* Disable pointer events on the img element */
     }
@@ -74,6 +78,6 @@
     }
 
     .images-column .dream img {
-      margin: 0 0 0 0;
+        margin: 0 0 0 0;
     }
 }

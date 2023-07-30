@@ -1,28 +1,28 @@
-// import tulips_in_a_vase from "../assets/paintings/tulips_in_a_vase.jpg";
-// import sunflower from "../assets/paintings/sunflower.jpg";
-// import a_trio_of_vases_with_daisies from "../assets/paintings/a_trio_of_vases_with_daisies.jpg";
-// import mom from "../assets/paintings/mom.jpg";
-// import ensemble from "../assets/paintings/ensemble.jpg";
-// import my_cup_of_tea from "../assets/paintings/my_cup_of_tea.jpg";
-// import best_buddy from "../assets/paintings/best_buddy.jpg";
-// import lobster_man from "../assets/paintings/lobster_man.jpg";
+import tulips_in_a_vase from "../assets/paintings/tulips_in_a_vase.jpg";
+import sunflower from "../assets/paintings/sunflower.jpg";
+import a_trio_of_vases_with_daisies from "../assets/paintings/a_trio_of_vases_with_daisies.jpg";
+import mom from "../assets/paintings/mom.jpg";
+import ensemble from "../assets/paintings/ensemble.jpg";
+import my_cup_of_tea from "../assets/paintings/my_cup_of_tea.jpg";
+import best_buddy from "../assets/paintings/best_buddy.jpg";
+import lobster_man from "../assets/paintings/lobster_man.jpg";
 // import avocados_in_frame from "../assets/paintings/avocados_in_frame.jpg";
 // import chickens_in_frame from "../assets/paintings/chickens_in_frame.jpg";
 // import pepper_in_frame from "../assets/paintings/pepper_in_frame.jpg";
 // import group_3 from "../assets/paintings/group_3.jpg";
 
-import tulips_in_a_vase from "../assets/paintings/group_3.jpg";
-import sunflower from "../assets/paintings/group_3.jpg";
-import a_trio_of_vases_with_daisies from "../assets/paintings/group_3.jpg";
-import mom from "../assets/paintings/group_3.jpg";
-import ensemble from "../assets/paintings/group_3.jpg";
-import my_cup_of_tea from "../assets/paintings/group_3.jpg";
-import best_buddy from "../assets/paintings/group_3.jpg";
-import lobster_man from "../assets/paintings/group_3.jpg";
-import avocados_in_frame from "../assets/paintings/group_3.jpg";
-import chickens_in_frame from "../assets/paintings/group_3.jpg";
-import pepper_in_frame from "../assets/paintings/group_3.jpg";
-import group_3 from "../assets/paintings/group_3.jpg";
+// import tulips_in_a_vase from "../assets/paintings/group_3.jpg";
+// import sunflower from "../assets/paintings/group_3.jpg";
+// import a_trio_of_vases_with_daisies from "../assets/paintings/group_3.jpg";
+// import mom from "../assets/paintings/group_3.jpg";
+// import ensemble from "../assets/paintings/group_3.jpg";
+// import my_cup_of_tea from "../assets/paintings/group_3.jpg";
+// import best_buddy from "../assets/paintings/group_3.jpg";
+// import lobster_man from "../assets/paintings/group_3.jpg";
+// import avocados_in_frame from "../assets/paintings/group_3.jpg";
+// import chickens_in_frame from "../assets/paintings/group_3.jpg";
+// import pepper_in_frame from "../assets/paintings/group_3.jpg";
+// import group_3 from "../assets/paintings/group_3.jpg";
 
 export interface PaintingData {
     id: number;
@@ -116,46 +116,46 @@ const imageData: PaintingData[] = [
         dimensions: "6\" x 6\"",
         year: "2023",
     },
-    {
-        id: 9,
-        src: avocados_in_frame,
-        alt: "Avocados in Frame",
-        categories: ["all", "still life"],
-        surface_material: "Canvas",
-        medium: "Acrylic",
-        dimensions: "6\" x 6\"",
-        year: "2023",
-    },
-    {
-        id: 10,
-        src: chickens_in_frame,
-        alt: "Chickens in Frame",
-        categories: ["all", "still life"],
-        surface_material: "Canvas",
-        medium: "Acrylic",
-        dimensions: "6\" x 6\"",
-        year: "2023",
-    },
-    {
-        id: 11,
-        src: pepper_in_frame,
-        alt: "Pepper in Frame",
-        categories: ["all", "still life"],
-        surface_material: "Canvas",
-        medium: "Acrylic",
-        dimensions: "6\" x 6\"",
-        year: "2023",
-    },
-        {
-        id: 12,
-        src: group_3,
-        alt: "Group 3",
-        categories: ["all", "still life"],
-        surface_material: "Canvas",
-        medium: "Acrylic",
-        dimensions: "6\" x 6\"",
-        year: "2023",
-    }
+    // {
+    //     id: 9,
+    //     src: avocados_in_frame,
+    //     alt: "Avocados in Frame",
+    //     categories: ["all", "still life"],
+    //     surface_material: "Canvas",
+    //     medium: "Acrylic",
+    //     dimensions: "6\" x 6\"",
+    //     year: "2023",
+    // },
+    // {
+    //     id: 10,
+    //     src: chickens_in_frame,
+    //     alt: "Chickens in Frame",
+    //     categories: ["all", "still life"],
+    //     surface_material: "Canvas",
+    //     medium: "Acrylic",
+    //     dimensions: "6\" x 6\"",
+    //     year: "2023",
+    // },
+    // {
+    //     id: 11,
+    //     src: pepper_in_frame,
+    //     alt: "Pepper in Frame",
+    //     categories: ["all", "still life"],
+    //     surface_material: "Canvas",
+    //     medium: "Acrylic",
+    //     dimensions: "6\" x 6\"",
+    //     year: "2023",
+    // },
+    //     {
+    //     id: 12,
+    //     src: group_3,
+    //     alt: "Group 3",
+    //     categories: ["all", "still life"],
+    //     surface_material: "Canvas",
+    //     medium: "Acrylic",
+    //     dimensions: "6\" x 6\"",
+    //     year: "2023",
+    // }
 ];
 
 export default imageData;
