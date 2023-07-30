@@ -14,10 +14,6 @@ export function About() {
     return (<div>About</div>)
 }
 
-export function Contact() {
-    return (<div>Contact</div>)
-}
-
 export function HomePage() {
     const [selectedCategory, setSelectedCategory] = useState("all"); // Initial "all"
     const [selectedPainting, setSelectedPainting] = useState<PaintingData | null>(null); // Initial null
@@ -48,6 +44,7 @@ export function HomePage() {
         } else {
             setSelectedCategory(category);
         }
+        setIsNavOpen(false);
     }
 
     // Function to handle hamburger icon click
@@ -55,20 +52,14 @@ export function HomePage() {
         setIsNavOpen((prev) => !prev);
     };
 
-    // Function to handle item clicks in the navigation panel
-    const handleNavItemClicked = (item: string) => {
-        console.log("Item clicked:", item);
-        setIsNavOpen(false);
-        // Add any logic you need when an item is clicked
-    };
-
     return (
         <div className="container">
             <ArtistHeader handleHamburgerClick={handleHamburgerClick}/>
             <NavBar
+                setSelectedCategory={handleCategoryClick}
+                selectedCategory={selectedCategory}
                 isOpen={isNavOpen}
                 onClose={() => setIsNavOpen(false)}
-                onItemClick={handleNavItemClicked}
             />
             <TextSection
                 setSelectedCategory={handleCategoryClick}
@@ -76,8 +67,6 @@ export function HomePage() {
             />
             {selectedCategory === "about" ? (
                 <About/>
-            ) : selectedCategory === "contact" ? (
-                <Contact/>
             ) : selectedPainting ? (
                 <IndividualPainting painting={selectedPainting}/>
             ) : (

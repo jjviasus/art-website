@@ -16,9 +16,6 @@ export function Personal({ selectedCategory, onSelectCategory }: PersonalProps) 
       <div className={`row gray-text abel ${selectedCategory === "about" ? "selected-category" : ""}`} onClick={() => handleCategoryClick("about")}>
         about
       </div>
-      <div className={`row gray-text abel ${selectedCategory === "contact" ? "selected-category" : ""}`} onClick={() => handleCategoryClick("contact")}>
-        contact
-      </div>
     </div>
   );
 }

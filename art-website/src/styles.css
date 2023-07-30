@@ -9,11 +9,13 @@
     --black-color: #1a1a1a;
     --gray-color: #808080;
     --dark-gray-color: #363636;
+    --scotch-mist-color: #fff9df;
+    --dull-purple-color: #7f576a;
+    --mirage-color: #201520;
 
     --font-family-serif: 'Inria Serif', serif;
     --font-family-cursive: 'Kristi', cursive;
     --font-family-sans-serif: 'Abel', sans-serif;
-    /*background-color: #fff9df;*/
 }
 
 /* Common Text Styles */
@@ -116,5 +118,13 @@
 
     .kristi {
         font-size: 28px;
+    }
+
+    .categories .row:hover,
+    .personal .row:hover,
+    .socials .row:hover,
+    .purchase:hover {
+        transform: none;
+        transition: none;
     }
 }

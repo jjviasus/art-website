@@ -1,5 +1,4 @@
 import React from "react";
-import facebookIcon from "../../assets/icons/facebook.svg";
 import instagramIcon from "../../assets/icons/instagram.svg";
 import emailIcon from "../../assets/icons/email2.svg";
 
@@ -15,12 +14,6 @@ export function Socials() {
 
   return (
     <div className="socials">
-      <img
-        className="row social-icon"
-        src={facebookIcon}
-        alt="Facebook"
-        onClick={() => handleSocialClick("Facebook")}
-      />
       <img
         className="row social-icon"
         src={instagramIcon}
