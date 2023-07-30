@@ -9,6 +9,9 @@ export function Socials() {
     if (platform === "Email") {
       // Open the user's default email app and compose an email to dfanara.art@gmail.com
       window.location.href = "mailto:dfanara.art@gmail.com";
+    } else if (platform === "Instagram") {
+      // Open the user's Instagram profile in a new tab
+      window.open("https://www.instagram.com/dfan.art/", "_blank");
     }
   };
 
