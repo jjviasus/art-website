@@ -18,13 +18,13 @@ export function Socials() {
   return (
     <div className="socials">
       <img
-        className="row social-icon"
+        className="row social-icon-instagram"
         src={instagramIcon}
         alt="Instagram"
         onClick={() => handleSocialClick("Instagram")}
       />
       <img
-        className="row social-icon"
+        className="row social-icon-email"
         src={emailIcon}
         alt="Email"
         onClick={() => handleSocialClick("Email")}

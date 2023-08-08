@@ -3,6 +3,8 @@
 /* Hide the header by default */
 .artist-header {
     display: none;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /* Hamburger Styles */
@@ -21,10 +23,10 @@
         gap: 10px;
         justify-content: center;
         align-items: center;
-        height: 40px;
+        height: 60px;
         position: sticky;
         top: 0;
-        background-color: rgba(241, 235, 237, 1); /* Fully white color (255, 255, 255) with 90% transparency (0.9) */
+        background-color: rgba(241, 235, 237, 0.9); /* Fully white color (255, 255, 255) with 90% transparency (0.9) */
         z-index: 1; /* Ensure the header stays on top of other content */
     }
 }

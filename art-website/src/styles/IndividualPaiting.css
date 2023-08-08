@@ -22,7 +22,7 @@
     height: 100vh;
     max-height: calc(100vh - 168px); /* Considering margins and padding for container */
     object-fit: contain;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); !* This needs to be fixed *!*/
 }
 
 .individual-image-column .painting-container .info-purchase {

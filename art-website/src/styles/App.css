@@ -1,0 +1,24 @@
+/* == Home Page CSS == */
+
+/* Container Styles */
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px; /* Adjust the gap between columns as needed */
+  margin: 40px 40px 40px 40px;
+}
+
+/* When the nav bar is open we don't want the user to be able to scroll */
+.no-scroll {
+  overflow: hidden;
+}
+
+/* Media Queries */
+@media screen and (max-width: 576px) {
+  /* Apply these when the screen size is below 576px */
+  .container {
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0 0 0;
+  }
+}

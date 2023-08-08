@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 interface PersonalProps {
   selectedCategory: string;
@@ -13,9 +14,13 @@ export function Personal({ selectedCategory, onSelectCategory }: PersonalProps) 
 
   return (
     <div className="personal">
-      <div className={`row gray-text abel ${selectedCategory === "about" ? "selected-category" : ""}`} onClick={() => handleCategoryClick("about")}>
+      <Link
+          className={`row gray-text abel ${selectedCategory === "about" ? "selected-category" : ""}`}
+          onClick={() => handleCategoryClick("about")}
+          to="/about"
+      >
         about
-      </div>
+      </Link>
     </div>
   );
 }

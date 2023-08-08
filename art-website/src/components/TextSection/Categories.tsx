@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 interface CategoriesProps {
   selectedCategory: string;
@@ -12,48 +13,55 @@ export function Categories({ selectedCategory, onSelectCategory }: CategoriesPro
 
   return (
     <div className="categories">
-      <div
+      <Link
         className={`row gray-text abel ${selectedCategory === "all" ? "selected-category" : ""}`}
         onClick={() => handleCategoryClick("all")}
+        to="/"
       >
         all
-      </div>
-      <div
+      </Link>
+      <Link
         className={`row gray-text abel ${selectedCategory === "still life" ? "selected-category" : ""}`}
         onClick={() => handleCategoryClick("still life")}
+        to="/still-life"
       >
         still life
-      </div>
-      <div
+      </Link>
+      <Link
         className={`row gray-text abel ${selectedCategory === "landscape" ? "selected-category" : ""}`}
         onClick={() => handleCategoryClick("landscape")}
+        to="/landscape"
       >
         landscape
-      </div>
-      <div
+      </Link>
+      <Link
         className={`row gray-text abel ${selectedCategory === "portrait" ? "selected-category" : ""}`}
         onClick={() => handleCategoryClick("portrait")}
+        to="/portrait"
       >
         portrait
-      </div>
-      <div
+      </Link>
+      <Link
         className={`row gray-text abel ${selectedCategory === "figure" ? "selected-category" : ""}`}
         onClick={() => handleCategoryClick("figure")}
+        to="/figure"
       >
         figure
-      </div>
-      <div
+      </Link>
+      <Link
         className={`row gray-text abel ${selectedCategory === "floral" ? "selected-category" : ""}`}
         onClick={() => handleCategoryClick("floral")}
+        to="/floral"
       >
         floral
-      </div>
-      <div
+      </Link>
+      <Link
         className={`row gray-text abel ${selectedCategory === "interior" ? "selected-category" : ""}`}
         onClick={() => handleCategoryClick("interior")}
+        to="/interior"
       >
         interior
-      </div>
+      </Link>
     </div>
   );
 }

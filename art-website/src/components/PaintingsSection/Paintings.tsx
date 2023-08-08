@@ -1,18 +1,13 @@
 import React from "react";
 import imageData, {PaintingData} from "../../data/paintingData";
 import '../../styles/Paintings.css';
+import {Link} from "react-router-dom";
 
 interface ImagesColumnProps {
     selectedCategory: string;
-    setSelectedPainting: (image: PaintingData | null) => void;
 }
 
-export function Paintings({selectedCategory, setSelectedPainting}: ImagesColumnProps) {
-    const handlePaintingClick = (image: PaintingData) => {
-        console.log(`Painting ${image.alt} clicked!`);
-        setSelectedPainting(image); // Call the onSelectPainting function with the selected painting
-    }
-
+export function Paintings({selectedCategory}: ImagesColumnProps) {
     // Filter the ImageData based on the selected category
     const filteredImages: PaintingData[] = imageData.filter((image) =>
         image.categories.includes(selectedCategory)
@@ -30,10 +25,20 @@ export function Paintings({selectedCategory, setSelectedPainting}: ImagesColumnP
             {columns.map((column, columnIndex) => (
                 <div className="dream" key={columnIndex}>
                     {column.map((image) => (
-                        <div className="dream-content">
-                            <img src={image.src} alt={image.alt} key={image.id} onClick={() => handlePaintingClick(image)}/>
-                            <div className="dream-title-mobile inria-serif-bold-sm black-text">{image.alt}</div>
-                            <div className="dream-info-mobile inria-serif-light-sm dark-gray-text">{image.dimensions}, {image.medium}, {image.surface_material}, {image.year}</div>
+                        <div className="dream-content" key={image.id}>
+                            <Link to={`/paintings/${image.id}`}>
+                                <img
+                                    src={image.src}
+                                    alt={image.alt}
+                                />
+                            </Link>
+                            <div className="dream-title-mobile inria-serif-bold-sm black-text">
+                                {image.alt}
+                            </div>
+                            <div className="dream-info-mobile inria-serif-light-sm dark-gray-text">
+                                {image.dimensions}, {image.medium}, {image.surface_material},{" "}
+                                {image.year}
+                            </div>
                         </div>
                     ))}
                 </div>

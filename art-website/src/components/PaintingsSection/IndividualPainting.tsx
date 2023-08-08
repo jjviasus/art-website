@@ -1,12 +1,23 @@
 import React from 'react';
-import {PaintingData} from "../../data/paintingData";
 import '../../styles/IndividualPaiting.css'
+import { useParams } from 'react-router-dom';
+import imageData from "../../data/paintingData";
 
-interface IndividualPaintingProps {
-    painting: PaintingData
-}
+function IndividualPainting() {
+    const { id } = useParams();
 
-function IndividualPainting({painting}: IndividualPaintingProps) {
+    // Check if the id parameter is undefined or not a valid number
+    if (!id || isNaN(parseInt(id))) {
+        return <></>;
+    }
+
+    // Find the painting with the matching id in the imageData array
+    const painting = imageData.find(painting => painting.id === parseInt(id));
+
+    if (!painting) {
+        return <div>Painting not found.</div>;
+    }
+
     return (
         <div className="individual-image-column">
             <div className="painting-container">

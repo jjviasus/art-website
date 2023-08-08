@@ -3,11 +3,20 @@
 /* Text Column Styles */
 .text-column {
     text-align: left;
-    display: inline-block; /* Causes the text-column to shrink to the width of its contents. */
+    display: flex; /* Causes the text-column to shrink to the width of its contents. */
+    flex-direction: column;
     position: fixed;
     top: 40px;
     left: 40px;
-    bottom: 0;
+    height: 100vh;
+    justify-content: space-evenly;
+}
+
+.text-column-bottom-row {
+    display: flex;
+    position: absolute;
+    bottom: 80px;
+    gap: 40px;
 }
 
 /* == Media Queries == */
