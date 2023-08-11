@@ -1,0 +1,27 @@
+.categories {
+    display: flex;
+    flex-direction: column;
+}
+
+.row.selected-category {
+    color: var(--mirage-color);
+}
+
+.categories .row:hover {
+    transform: translateX(-5px);
+    transition: transform 0.15s ease;
+}
+
+.categories .row {
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    text-decoration: none;
+}
+
+/* == Media Queries == */
+@media screen and (max-width: 576px) {
+    .categories .row:hover {
+        transform: none;
+        transition: none;
+    }
+}

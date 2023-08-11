@@ -1,12 +1,12 @@
 import hamburger from "../assets/icons/bars-solid.svg";
 import React from "react";
-import '../styles/ArtistHeader.css';
+import '../styles/MobileArtistHeader.css';
 
 interface HeaderProps {
     handleHamburgerClick: () => void;
 }
 
-export function ArtistHeader({handleHamburgerClick}: HeaderProps) {
+export function MobileArtistHeader({handleHamburgerClick}: HeaderProps) {
     return (
         <div className="artist-header">
             <div className="black-text inria-serif">Deborah</div>

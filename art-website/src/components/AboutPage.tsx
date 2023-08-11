@@ -1,9 +1,9 @@
 import React from "react";
 import personal from "../assets/personal/IMG_1911.jpg";
-import "../styles/About.css";
+import "../styles/AboutPage.css";
 
 
-export function About() {
+export function AboutPage() {
     return (
         <div className="about-container">
             <img src={personal} alt="personal" className="about-img"/>

@@ -23,7 +23,7 @@
     background-color: #F1EBED;
 }
 
-/* Common Text Styles */
+/* Text color classes */
 .black-text {
     /*color: var(--black-color);*/
     color: #3e2e33;
@@ -38,6 +38,8 @@
     /*color: var(--dark-gray-color);*/
     color: var(--purplish-gray-color);
 }
+
+/* Text style classes */
 
 .abel {
     font-family: var(--font-family-sans-serif);
@@ -78,84 +80,14 @@
     font-size: 36px;
 }
 
-/* Categories and Personal Sections Styles */
-.categories {
-    display: flex;
-    flex-direction: column;
-}
-
-.artist-name {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.row.selected-category {
-    color: var(--mirage-color);
-}
-
-/* Socials Section Styles */
-.socials {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Align items vertically in the center */
-}
-
-.social-icon-instagram {
-    margin-right: 10px;
-    width: 18px;
-    height: 18px;
-}
-
-.social-icon-email {
-    width: 25px;
-    height: 25px;
-}
-
-/* == Hover and Click Styles == */
-.categories .row:hover,
-.purchase:hover {
-    transform: translateX(-5px);
-    transition: transform 0.15s ease;
-}
-.personal .row:hover,
-.socials .row:hover {
-    transform: translateY(-2.5px);
-    transition: transform 0.15s ease;
-}
-
-.categories .row,
-.personal .row,
-.socials .row,
-.purchase {
-    cursor: pointer;
-    transition: transform 0.5s ease;
-    text-decoration: none;
-}
-
 /* == Media Queries == */
 @media screen and (max-width: 576px) {
-    /* Apply these when the screen size is below 768px */
+    /* Apply these when the screen size is below 576px */
     .inria-serif {
         font-size: 28px;
     }
 
     .kristi {
         font-size: 28px;
-    }
-
-    .categories .row:hover,
-    .personal .row:hover,
-    .socials .row:hover,
-    .purchase:hover {
-        transform: none;
-        transition: none;
-    }
-
-    .personal {
-        margin-top: 40px;
-    }
-
-    .socials {
-        margin-top: 40px;
     }
 }

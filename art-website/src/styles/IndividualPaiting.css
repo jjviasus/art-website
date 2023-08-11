@@ -31,6 +31,17 @@
     align-items: center; /* Center the items horizontally */
 }
 
+.purchase:hover {
+    transform: translateX(-5px);
+    transition: transform 0.15s ease;
+}
+
+.purchase {
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    text-decoration: none;
+}
+
 @media screen and (max-width: 576px) {
     /* Apply these when the screen size is below 768px */
     .painting-container {
@@ -42,5 +53,10 @@
 
     .individual-image-column {
         margin-left: 0;
+    }
+
+    .purchase:hover {
+        transform: none;
+        transition: none;
     }
 }

@@ -1,24 +1,54 @@
-/* == Home Page CSS == */
-
 /* Container Styles */
 .container {
-  display: flex;
-  flex-direction: row;
-  gap: 40px; /* Adjust the gap between columns as needed */
-  margin: 40px 40px 40px 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px; /* Adjust the gap between columns as needed */
+    margin: 40px 40px 40px 40px;
 }
 
 /* When the nav bar is open we don't want the user to be able to scroll */
 .no-scroll {
-  overflow: hidden;
+    overflow: hidden;
 }
+
+/* == Text Column Styles==  */
+.text-column {
+    text-align: left;
+    display: flex; /* Causes the text-column to shrink to the width of its contents. */
+    flex-direction: column;
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    height: 100vh;
+    justify-content: space-evenly;
+}
+
+.text-column-bottom-row {
+    display: flex;
+    position: absolute;
+    bottom: 80px;
+    gap: 40px;
+}
+
+.artist-name {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* == idk == */
+
 
 /* Media Queries */
 @media screen and (max-width: 576px) {
-  /* Apply these when the screen size is below 576px */
-  .container {
-    flex-direction: column;
-    gap: 10px;
-    margin: 10px 0 0 0;
-  }
+    /* Apply these when the screen size is below 576px */
+    .container {
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px 0 0 0;
+    }
+
+    .text-column {
+        display: none; /* Hide it */
+    }
 }

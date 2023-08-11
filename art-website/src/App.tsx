@@ -1,15 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import {Route, Routes, useNavigate} from "react-router-dom";
-import './styles.css';
+import './global.css';
 import "./styles/App.css"
-import "./styles/Paintings.css"
-import {Paintings, TextSection} from './components';
-import {fadeInAnimation} from './components/animations/FadeInAnimation';
-import {PaintingData} from "./data/paintingData";
-import {ArtistHeader} from "./components/ArtistHeader";
-import {NavBar} from "./components/NavBar";
-import {About} from "./components/About";
-import IndividualPainting from "./components/PaintingsSection/IndividualPainting";
+import {AboutButton, Categories, Socials} from './components';
+import {fadeInAnimation} from './animations/FadeInAnimation';
+import {MobileArtistHeader} from "./components/MobileArtistHeader";
+import {MobileNavBar} from "./components/MobileNavBar";
+import {AboutPage} from "./components/AboutPage";
+import {Gallery, IndividualPainting} from "./components";
 
 function App() {
     const [selectedCategory, setSelectedCategory] = useState("all"); // Initial "all"
@@ -54,27 +52,41 @@ function App() {
 
     return (
         <div className="container">
-            <ArtistHeader handleHamburgerClick={handleHamburgerClick}/>
-            <NavBar
+            <MobileArtistHeader handleHamburgerClick={handleHamburgerClick}/>
+            <MobileNavBar
                 setSelectedCategory={handleCategoryClick}
                 selectedCategory={selectedCategory}
                 isOpen={isNavOpen}
                 onClose={() => setIsNavOpen(false)}
             />
-            <TextSection
-                setSelectedCategory={handleCategoryClick}
-                selectedCategory={selectedCategory}
-            />
+            <div className="text-column">
+                <div className="artist-name black-text">
+                    <div className="inria-serif">Deborah</div>
+                    <div className="inria-serif">Fanara</div>
+                    <div className="smaller-text kristi">art</div>
+                </div>
+                <Categories
+                    selectedCategory={selectedCategory}
+                    onSelectCategory={handleCategoryClick}
+                />
+                <div className="text-column-bottom-row">
+                    <AboutButton
+                        selectedCategory={selectedCategory}
+                        onSelectCategory={handleCategoryClick}
+                    />
+                    <Socials/>
+                </div>
+            </div>
             <Routes>
-                <Route path="/" element={<Paintings selectedCategory={"all"}/>} />
-                <Route path="/still-life" element={<Paintings selectedCategory={"still life"}/>} />
-                <Route path="/landscape" element={<Paintings selectedCategory={"landscape"}/>} />
-                <Route path="/portrait" element={<Paintings selectedCategory={"portrait"}/>} />
-                <Route path="/figure" element={<Paintings selectedCategory={"figure"}/>} />
-                <Route path="/floral" element={<Paintings selectedCategory={"floral"}/>} />
-                <Route path="/interior" element={<Paintings selectedCategory={"interior"}/>} />
-                <Route path="/about" element={<About/>} />
-                <Route path="/paintings/:id" element={<IndividualPainting/>} />
+                <Route path="/" element={<Gallery selectedCategory={"all"}/>}/>
+                <Route path="/still-life" element={<Gallery selectedCategory={"still life"}/>}/>
+                <Route path="/landscape" element={<Gallery selectedCategory={"landscape"}/>}/>
+                <Route path="/portrait" element={<Gallery selectedCategory={"portrait"}/>}/>
+                <Route path="/figure" element={<Gallery selectedCategory={"figure"}/>}/>
+                <Route path="/floral" element={<Gallery selectedCategory={"floral"}/>}/>
+                <Route path="/interior" element={<Gallery selectedCategory={"interior"}/>}/>
+                <Route path="/about" element={<AboutPage/>}/>
+                <Route path="/paintings/:id" element={<IndividualPainting/>}/>
             </Routes>
         </div>
     )

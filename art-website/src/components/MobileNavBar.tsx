@@ -1,9 +1,9 @@
 import closeIcon from "../assets/icons/times-solid.svg";
 import React from "react";
-import "../styles/NavBar.css"
-import {Categories} from "./TextSection/Categories";
-import {Personal} from "./TextSection/Personal";
-import {Socials} from "./TextSection/Socials";
+import "../styles/MobileNavBar.css"
+import {Categories} from "./Categories";
+import {AboutButton} from "./AboutButton";
+import {Socials} from "./Socials";
 
 interface NavBarProps {
     selectedCategory: string;
@@ -12,7 +12,7 @@ interface NavBarProps {
     onClose: () => void;
 }
 
-export function NavBar({selectedCategory, setSelectedCategory, isOpen, onClose}: NavBarProps) {
+export function MobileNavBar({selectedCategory, setSelectedCategory, isOpen, onClose}: NavBarProps) {
     const handleCategoryClick = (category: string) => {
         setSelectedCategory(category); // Update the selected category in the parent component
     };
@@ -28,7 +28,7 @@ export function NavBar({selectedCategory, setSelectedCategory, isOpen, onClose}:
                         <Categories selectedCategory={selectedCategory} onSelectCategory={handleCategoryClick}/>
                     </div>
                     <div className="nav-item">
-                        <Personal selectedCategory={selectedCategory} onSelectCategory={handleCategoryClick}/>
+                        <AboutButton selectedCategory={selectedCategory} onSelectCategory={handleCategoryClick}/>
                     </div>
                     <div className="nav-item">
                         <Socials/>

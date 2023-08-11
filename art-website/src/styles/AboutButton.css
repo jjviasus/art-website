@@ -1,0 +1,10 @@
+.aboutButton .row:hover {
+    transform: translateY(-5px);
+    transition: transform 0.15s ease;
+}
+
+.aboutButton .row {
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    text-decoration: none;
+}

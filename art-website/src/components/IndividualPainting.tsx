@@ -1,9 +1,9 @@
 import React from 'react';
-import '../../styles/IndividualPaiting.css'
+import '../styles/IndividualPaiting.css'
 import { useParams } from 'react-router-dom';
-import imageData from "../../data/paintingData";
+import imageData from "../data/paintingData";
 
-function IndividualPainting() {
+export function IndividualPainting() {
     const { id } = useParams();
 
     // Check if the id parameter is undefined or not a valid number
@@ -31,5 +31,3 @@ function IndividualPainting() {
         </div>
     );
 }
-
-export default IndividualPainting;

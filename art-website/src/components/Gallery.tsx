@@ -1,13 +1,13 @@
 import React from "react";
-import imageData, {PaintingData} from "../../data/paintingData";
-import '../../styles/Paintings.css';
+import imageData, {PaintingData} from "../data/paintingData";
+import '../styles/Gallery.css';
 import {Link} from "react-router-dom";
 
 interface ImagesColumnProps {
     selectedCategory: string;
 }
 
-export function Paintings({selectedCategory}: ImagesColumnProps) {
+export function Gallery({selectedCategory}: ImagesColumnProps) {
     // Filter the ImageData based on the selected category
     const filteredImages: PaintingData[] = imageData.filter((image) =>
         image.categories.includes(selectedCategory)
