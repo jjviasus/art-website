@@ -108,7 +108,7 @@ function App() {
                 <Route path="/floral" element={<Gallery selectedCategory={"floral"}/>}/>
                 <Route path="/interior" element={<Gallery selectedCategory={"interior"}/>}/>
                 <Route path="/about" element={<AboutPage/>}/>
-                <Route path="/paintings/:id" element={<IndividualPainting/>}/>
+                <Route path="/paintings/:id" element={<IndividualPainting selectedCategory={selectedCategory}/>}/>
             </Routes>
         </div>
     )

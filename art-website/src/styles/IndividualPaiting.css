@@ -1,14 +1,14 @@
 /* == Individual Image Column Styles == */
 .individual-painting-container-desktop {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    width: 100%; /* This ensures it doesn't go off the screen considering the gap */
+    width: 100%;
     margin-left: 220px;
-    gap: 18px;
+    gap: 128px;
 }
 
-.individual-painting-container-desktop img {
+.individual-painting-container-content img {
     max-width: 100%;
     height: 100vh;
     max-height: calc(100vh - 200px); /* Considering margins and padding for container */
@@ -19,14 +19,25 @@
     display: none;
 }
 
+.individual-painting-container-content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+}
+
+.individual-painting-container-desktop .arrow {
+    transition: transform 0.3s ease;
+    padding: 20px;
+}
+
+.individual-painting-container-desktop .arrow:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
 @media screen and (max-width: 576px) {
-    /* Apply these when the screen size is below 768px */
-    .individual-painting-container-content {
-        height: 100vh;
-        max-height: calc(100vh - 168px); /* Considering margins and padding for container */
-        /*display: flex;*/
-        /*justify-content: center; !* Center horizontally *!*/
-    }
+    /* Apply these when the screen size is below 576px */
 
     .individual-painting-container-desktop {
         margin-left: 0;
