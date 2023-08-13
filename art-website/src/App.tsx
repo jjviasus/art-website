@@ -4,10 +4,10 @@ import './global.css';
 import "./styles/App.css"
 import {AboutButton, Categories, Socials} from './components';
 import {fadeInAnimation} from './animations/FadeInAnimation';
-import {MobileArtistHeader} from "./components/MobileArtistHeader";
-import {MobileNavBar} from "./components/MobileNavBar";
 import {AboutPage} from "./components/AboutPage";
 import {Gallery, IndividualPainting} from "./components";
+import hamburger from "./assets/icons/bars-solid.svg";
+import closeIcon from "./assets/icons/times-solid.svg";
 
 function App() {
     const [selectedCategory, setSelectedCategory] = useState("all"); // Initial "all"
@@ -15,16 +15,16 @@ function App() {
     let navigate = useNavigate();
 
     useEffect(() => {
-        fadeInAnimation({selectors: '.dream img'});
+        fadeInAnimation({selectors: '.gallery-column img'});
     }, [])
 
     useEffect(() => {
         console.log('navigate')
-        fadeInAnimation({selectors: '.dream img'});
+        fadeInAnimation({selectors: '.gallery-column img'});
     }, [navigate])
 
     useEffect(() => {
-        fadeInAnimation({selectors: '.dream img'});
+        fadeInAnimation({selectors: '.gallery-column img'});
     }, [selectedCategory]);
 
     // Toggle the "no-scroll" class on the body element when the nav bar is open
@@ -38,7 +38,7 @@ function App() {
 
     const handleCategoryClick = (category: string) => {
         if (category === selectedCategory) {
-            fadeInAnimation({selectors: '.dream img'});
+            fadeInAnimation({selectors: '.gallery-column img'});
         } else {
             setSelectedCategory(category);
         }
@@ -51,25 +51,47 @@ function App() {
     };
 
     return (
-        <div className="container">
-            <MobileArtistHeader handleHamburgerClick={handleHamburgerClick}/>
-            <MobileNavBar
-                setSelectedCategory={handleCategoryClick}
-                selectedCategory={selectedCategory}
-                isOpen={isNavOpen}
-                onClose={() => setIsNavOpen(false)}
-            />
-            <div className="text-column">
-                <div className="artist-name black-text">
-                    <div className="inria-serif">Deborah</div>
-                    <div className="inria-serif">Fanara</div>
-                    <div className="smaller-text kristi">art</div>
+        <div className="app-container">
+            <div className="mobile-artist-header">
+                <div className="black-text font-inria-serif">Deborah</div>
+                <div className="black-text font-inria-serif">Fanara</div>
+                <div className="black-text smaller-text font-kristi">art</div>
+                <img
+                    className="hamburger"
+                    src={hamburger}
+                    alt="hamburger"
+                    onClick={handleHamburgerClick}
+                />
+            </div>
+            <div className={`mobile-nav-bar ${isNavOpen ? "open" : ""}`}>
+                <div className="mobile-nav-close-btn" onClick={() => setIsNavOpen(false)}>
+                    <img className="mobile-nav-close-icon" src={closeIcon} alt="Close"/>
+                </div>
+                <div className="mobile-nav-items">
+                    <div className="mobile-nav-items-container">
+                        <div className="mobile-nav-item">
+                            <Categories selectedCategory={selectedCategory} onSelectCategory={handleCategoryClick}/>
+                        </div>
+                        <div className="mobile-nav-item">
+                            <AboutButton selectedCategory={selectedCategory} onSelectCategory={handleCategoryClick}/>
+                        </div>
+                        <div className="mobile-nav-item">
+                            <Socials/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="desktop-nav-bar">
+                <div className="desktop-nav-bar-artist-name black-text">
+                    <div className="font-inria-serif">Deborah</div>
+                    <div className="font-inria-serif">Fanara</div>
+                    <div className="smaller-text font-kristi">art</div>
                 </div>
                 <Categories
                     selectedCategory={selectedCategory}
                     onSelectCategory={handleCategoryClick}
                 />
-                <div className="text-column-bottom-row">
+                <div className="desktop-nav-bar-bottom-row">
                     <AboutButton
                         selectedCategory={selectedCategory}
                         onSelectCategory={handleCategoryClick}

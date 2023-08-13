@@ -1,28 +1,28 @@
 /* == Paintings CSS == */
 
-.dream img:hover {
+.gallery-column img:hover {
     filter: brightness(90%); /* Darken the image to 80% brightness on hover */
     transform: scale(.99); /* Scale the image up to 110% on hover */
 }
 
-.dream img {
+.gallery-column img {
     cursor: pointer;
 }
 
-.images-column {
+.gallery-container {
     display: flex;
     flex-direction: row;
     gap: 10px;
     margin-left: 220px;
 }
 
-.images-column .dream {
+.gallery-container .gallery-column {
     display: flex;
     flex-direction: column;
     width: 100%; /* 32.5% or 100% */
 }
 
-.images-column .dream img {
+.gallery-container .gallery-column img {
     width: 100%;
     margin: 0 0 10px 0;
     border-radius: 3px;
@@ -31,53 +31,53 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.images-column .dream .dream-content {
+.gallery-container .gallery-column .gallery-column-content {
     display: flex;
     flex-direction: column;
     margin: 0 0 0 0;
 }
 
-.dream-title-mobile,
-.dream-info-mobile {
+.gallery-column-title-mobile,
+.gallery-column-info-mobile {
     display: none;
 }
 
 /* == Animation == */
-.images-column .dream img.animate {
+.gallery-container .gallery-column img.animate {
     opacity: 1; /* Fade the image in to fully opaque */
 }
 
 /* Media Queries */
 @media screen and (max-width: 576px) {
     /* Apply these when the screen size is below 768px */
-    .dream-title-mobile,
-    .dream-info-mobile {
+    .gallery-column-title-mobile,
+    .gallery-column-info-mobile {
         display: block;
     }
 
-    .dream-info-mobile {
+    .gallery-column-info-mobile {
         margin-bottom: 24px;
     }
 
-    .images-column {
+    .gallery-container {
         flex-direction: column;
         gap: 0;
         margin-left: 0;
     }
 
-    .images-column .dream .dream-content {
+    .gallery-container .gallery-column .gallery-column-content {
         margin: 0 16px 0 16px;
     }
 
-    .images-column .dream .dream-content img {
+    .gallery-container .gallery-column .gallery-column-content img {
         pointer-events: none; /* Disable pointer events on the img element */
     }
 
-    .images-column .dream {
+    .gallery-container .gallery-column {
         width: 100%;
     }
 
-    .images-column .dream img {
+    .gallery-container .gallery-column img {
         margin: 0 0 0 0;
     }
 }

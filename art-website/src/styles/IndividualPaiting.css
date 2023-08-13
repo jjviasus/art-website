@@ -1,5 +1,5 @@
 /* == Individual Image Column Styles == */
-.individual-image-column {
+.individual-painting-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,17 +7,17 @@
     margin-left: 220px;
 }
 
-.individual-image-column .painting-container {
+.individual-painting-container .individual-painting-container-content {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.individual-image-column .painting-container .title {
-    text-align: left;
+.individual-painting-container .individual-painting-container-content .title {
+    text-align: center;
 }
 
-.individual-image-column .painting-container .painting-image {
+.individual-painting-container .individual-painting-container-content img {
     max-width: 100%;
     height: 100vh;
     max-height: calc(100vh - 168px); /* Considering margins and padding for container */
@@ -25,18 +25,18 @@
     /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); !* This needs to be fixed *!*/
 }
 
-.individual-image-column .painting-container .info-purchase {
+.individual-painting-container .individual-painting-container-content .info-purchase {
     display: flex;
     justify-content: space-between; /* Align the info and purchase to opposite ends */
     align-items: center; /* Center the items horizontally */
 }
 
-.purchase:hover {
+.purchase-button:hover {
     transform: translateX(-5px);
     transition: transform 0.15s ease;
 }
 
-.purchase {
+.purchase-button {
     cursor: pointer;
     transition: transform 0.5s ease;
     text-decoration: none;
@@ -44,18 +44,18 @@
 
 @media screen and (max-width: 576px) {
     /* Apply these when the screen size is below 768px */
-    .painting-container {
+    .individual-painting-container-content {
         height: 100vh;
         max-height: calc(100vh - 168px); /* Considering margins and padding for container */
         /*display: flex;*/
         /*justify-content: center; !* Center horizontally *!*/
     }
 
-    .individual-image-column {
+    .individual-painting-container {
         margin-left: 0;
     }
 
-    .purchase:hover {
+    .purchase-button:hover {
         transform: none;
         transition: none;
     }

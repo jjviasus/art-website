@@ -1,4 +1,4 @@
-.socials {
+.socials-container {
     display: flex; /* Use flexbox for layout */
     align-items: center; /* Align items vertically in the center */
 }
@@ -14,12 +14,12 @@
     height: 25px;
 }
 
-.socials .row:hover {
+.socials-container .row:hover {
     transform: translateY(-2.5px);
     transition: transform 0.15s ease;
 }
 
-.socials .row {
+.socials-container .row {
     cursor: pointer;
     transition: transform 0.5s ease;
     text-decoration: none;
@@ -29,12 +29,12 @@
 @media screen and (max-width: 576px) {
     /* Apply these when the screen size is below 576px */
 
-    .socials .row:hover {
+    .socials-container .row:hover {
         transform: none;
         transition: none;
     }
 
-    .socials {
+    .socials-container {
         margin-top: 40px;
     }
 }

@@ -17,7 +17,7 @@ export function Socials() {
   };
 
   return (
-    <div className="socials">
+    <div className="socials-container">
       <img
         className="row social-icon-instagram"
         src={instagramIcon}

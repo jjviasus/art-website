@@ -2,21 +2,20 @@ import React from "react";
 import {Link} from "react-router-dom";
 import '../styles/AboutButton.css';
 
-interface PersonalProps {
+interface AboutButtonProps {
   selectedCategory: string;
   onSelectCategory: (category: string) => void;
 }
 
-export function AboutButton({ selectedCategory, onSelectCategory }: PersonalProps) {
+export function AboutButton({ selectedCategory, onSelectCategory }: AboutButtonProps) {
   const handleCategoryClick = (category: string) => {
-    console.log(`Personal ${category} clicked!`);
-    onSelectCategory(category)  // Call the onSelectPersonal function with the selected personal category
+    onSelectCategory(category)
   };
 
   return (
     <div className="aboutButton">
       <Link
-          className={`row gray-text abel ${selectedCategory === "about" ? "selected-category" : ""}`}
+          className={`row gray-text font-abel ${selectedCategory === "about" ? "selected-category" : ""}`}
           onClick={() => handleCategoryClick("about")}
           to="/about"
       >

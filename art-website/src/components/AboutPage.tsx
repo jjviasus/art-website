@@ -5,9 +5,9 @@ import "../styles/AboutPage.css";
 
 export function AboutPage() {
     return (
-        <div className="about-container">
-            <img src={personal} alt="personal" className="about-img"/>
-            <div className="about-text black-text inria-serif-light">
+        <div className="about-page-container">
+            <img src={personal} alt="personal"/>
+            <div className="about-page-text black-text font-inria-serif-light">
                 <p>
                     Deborah Fanara is an artist with a story as diverse as her creations. Beginning her journey as an
                     art

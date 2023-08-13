@@ -1,18 +1,18 @@
 /* Container Styles */
-.container {
+.app-container {
     display: flex;
     flex-direction: row;
     gap: 40px; /* Adjust the gap between columns as needed */
     margin: 40px 40px 40px 40px;
 }
 
-/* When the nav bar is open we don't want the user to be able to scroll */
 .no-scroll {
+    /* When the nav bar is open we don't want the user to be able to scroll */
     overflow: hidden;
 }
 
-/* == Text Column Styles==  */
-.text-column {
+/* == Desktop Nav Bar Styles==  */
+.desktop-nav-bar {
     text-align: left;
     display: flex; /* Causes the text-column to shrink to the width of its contents. */
     flex-direction: column;
@@ -23,32 +23,103 @@
     justify-content: space-evenly;
 }
 
-.text-column-bottom-row {
+.desktop-nav-bar-bottom-row {
     display: flex;
     position: absolute;
     bottom: 80px;
     gap: 40px;
 }
 
-.artist-name {
+.desktop-nav-bar-artist-name {
     position: absolute;
     top: 0;
     left: 0;
 }
 
-/* == idk == */
+/* == Mobile Artist Header == */
+.mobile-artist-header {
+    display: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
+.hamburger {
+    width: 24px;
+    height: 24px;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+/* == Mobile Nav Bar Styles == */
+.mobile-nav-bar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: right 0.3s ease-in-out;
+    background-color: rgba(241, 235, 237, 1);
+}
+
+.mobile-nav-bar.open {
+    right: 0;
+}
+
+.mobile-nav-items-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-nav-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.mobile-nav-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.mobile-nav-item {
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.mobile-nav-close-icon {
+    width: 24px;
+    height: 24px;
+}
 
 /* Media Queries */
 @media screen and (max-width: 576px) {
     /* Apply these when the screen size is below 576px */
-    .container {
+    .app-container {
         flex-direction: column;
         gap: 10px;
         margin: 10px 0 0 0;
     }
 
-    .text-column {
+    .desktop-nav-bar {
         display: none; /* Hide it */
+    }
+
+    .mobile-artist-header {
+        display: flex; /* Show the header */
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        position: sticky;
+        top: 0;
+        background-color: rgba(241, 235, 237, 0.9); /* Fully white color (255, 255, 255) with 90% transparency (0.9) */
+        z-index: 1; /* Ensure the header stays on top of other content */
     }
 }

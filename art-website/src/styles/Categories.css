@@ -1,4 +1,4 @@
-.categories {
+.categories-container {
     display: flex;
     flex-direction: column;
 }
@@ -7,12 +7,12 @@
     color: var(--mirage-color);
 }
 
-.categories .row:hover {
+.categories-container .row:hover {
     transform: translateX(-5px);
     transition: transform 0.15s ease;
 }
 
-.categories .row {
+.categories-container .row {
     cursor: pointer;
     transition: transform 0.5s ease;
     text-decoration: none;
@@ -20,7 +20,7 @@
 
 /* == Media Queries == */
 @media screen and (max-width: 576px) {
-    .categories .row:hover {
+    .categories-container .row:hover {
         transform: none;
         transition: none;
     }

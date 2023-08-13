@@ -19,13 +19,13 @@ export function IndividualPainting() {
     }
 
     return (
-        <div className="individual-image-column">
-            <div className="painting-container">
-                <div className="title inria-serif-bold">{painting.alt}</div>
-                <img className="painting-image" src={painting.src} alt="" key=""/>
+        <div className="individual-painting-container">
+            <div className="individual-painting-container-content">
+                <div className="title font-inria-serif-bold">{painting.alt}</div>
+                <img src={painting.src} alt="" key=""/>
                 <div className="info-purchase">
-                    <div className="inria-serif-light dark-gray-text">{painting.dimensions}, {painting.medium}, {painting.surface_material}, {painting.year}</div>
-                    <div className="inria-serif-light dark-gray-text purchase">purchase</div>
+                    <div className="font-inria-serif-light dark-gray-text">{painting.dimensions}, {painting.medium}, {painting.surface_material}, {painting.year}</div>
+                    <div className="font-inria-serif-light dark-gray-text purchase-button">purchase</div>
                 </div>
             </div>
         </div>
