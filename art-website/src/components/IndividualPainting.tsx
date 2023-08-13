@@ -19,12 +19,21 @@ export function IndividualPainting() {
     }
 
     return (
-        <div className="individual-painting-container">
-            <div className="font-inria-serif-bold">{painting.alt}</div>
-            <img src={painting.src} alt="" key=""/>
-            <div
-                className="font-inria-serif-light dark-gray-text">{painting.dimensions}, {painting.medium}, {painting.surface_material}, {painting.year}
+        <>
+            <div className="individual-painting-container-desktop">
+                <div className="font-inria-serif-bold black-text">{painting.alt}</div>
+                <img src={painting.src} alt="" key=""/>
+                <div
+                    className="font-inria-serif-light dark-gray-text">{painting.dimensions}, {painting.medium}, {painting.surface_material}, {painting.year}
+                </div>
             </div>
-        </div>
+            <div className="individual-painting-container-mobile">
+                <img src={painting.src} alt="" key=""/>
+                <div className="title font-inria-serif-bold-sm black-text">{painting.alt}</div>
+                <div
+                    className="font-inria-serif-light-sm dark-gray-text">{painting.dimensions}, {painting.medium}, {painting.surface_material}, {painting.year}
+                </div>
+            </div>
+        </>
     );
 }
