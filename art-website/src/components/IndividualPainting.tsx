@@ -44,7 +44,7 @@ export function IndividualPainting({selectedCategory}: IndividualPaintingProps) 
                     <img src={leftArrow} alt="Left arrow"/>
                 </Link>
                 <div className="individual-painting-container-content">
-                    <div className="font-inria-serif-bold black-text">
+                    <div className="title font-inria-serif-bold black-text">
                         {painting.alt}
                     </div>
                     <img src={painting.src} alt="" key=""/>

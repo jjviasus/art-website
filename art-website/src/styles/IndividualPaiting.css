@@ -5,7 +5,10 @@
     align-items: center;
     width: 100%;
     margin-left: 220px;
-    gap: 128px;
+}
+
+.individual-painting-container-content .title {
+    font-size: 3vw;
 }
 
 .individual-painting-container-content img {
@@ -36,9 +39,36 @@
     transform: scale(1.2);
 }
 
+@media screen and (max-width: 768px) {
+    .individual-painting-container-desktop {
+        display: none;
+    }
+
+    .individual-painting-container-mobile {
+        margin-left: 220px;
+    }
+
+    .individual-painting-container-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        padding: 0 16px;
+    }
+
+    .individual-painting-container-mobile img {
+        border-radius: 3px;
+        width: 100%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .individual-painting-container-mobile .title {
+        margin-top: 4px;
+    }
+}
+
 @media screen and (max-width: 576px) {
     /* Apply these when the screen size is below 576px */
-
     .individual-painting-container-desktop {
         margin-left: 0;
     }
@@ -48,17 +78,8 @@
     }
 
     .individual-painting-container-mobile {
-        display: flex;
-        flex-direction: column;
-        padding: 0 16px;
-    }
-
-    .individual-painting-container-mobile img {
-        border-radius: 3px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    }
-
-    .individual-painting-container-mobile .title {
-        margin-top: 4px;
+        margin-left: 0;
+        justify-content: flex-start;
+        height: 100%;
     }
 }

@@ -49,7 +49,7 @@
 
 /* Media Queries */
 @media screen and (max-width: 576px) {
-    /* Apply these when the screen size is below 768px */
+    /* Apply these when the screen size is below 576px */
     .gallery-column-title-mobile,
     .gallery-column-info-mobile {
         display: block;
