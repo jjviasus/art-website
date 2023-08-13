@@ -7,6 +7,7 @@ export function AboutPage() {
     return (
         <div className="about-page-container">
             <img src={personal} alt="personal"/>
+            <div className="about-page-header black-text font-kristi">About Me</div>
             <div className="about-page-text black-text font-inria-serif-light">
                 <p>
                     Deborah Fanara is an artist with a story as diverse as her creations. Beginning her journey as an

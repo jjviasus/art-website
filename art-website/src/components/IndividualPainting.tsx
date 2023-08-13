@@ -1,10 +1,10 @@
 import React from 'react';
 import '../styles/IndividualPaiting.css'
-import { useParams } from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 import imageData from "../data/paintingData";
 
 export function IndividualPainting() {
-    const { id } = useParams();
+    const {id} = useParams();
 
     // Check if the id parameter is undefined or not a valid number
     if (!id || isNaN(parseInt(id))) {
@@ -20,13 +20,10 @@ export function IndividualPainting() {
 
     return (
         <div className="individual-painting-container">
-            <div className="individual-painting-container-content">
-                <div className="title font-inria-serif-bold">{painting.alt}</div>
-                <img src={painting.src} alt="" key=""/>
-                <div className="info-purchase">
-                    <div className="font-inria-serif-light dark-gray-text">{painting.dimensions}, {painting.medium}, {painting.surface_material}, {painting.year}</div>
-                    <div className="font-inria-serif-light dark-gray-text purchase-button">purchase</div>
-                </div>
+            <div className="font-inria-serif-bold">{painting.alt}</div>
+            <img src={painting.src} alt="" key=""/>
+            <div
+                className="font-inria-serif-light dark-gray-text">{painting.dimensions}, {painting.medium}, {painting.surface_material}, {painting.year}
             </div>
         </div>
     );

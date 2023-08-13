@@ -69,15 +69,15 @@
         margin: 0 16px 0 16px;
     }
 
-    .gallery-container .gallery-column .gallery-column-content img {
-        pointer-events: none; /* Disable pointer events on the img element */
-    }
-
     .gallery-container .gallery-column {
         width: 100%;
     }
 
     .gallery-container .gallery-column img {
         margin: 0 0 0 0;
+    }
+
+    .gallery-column-content-link {
+        pointer-events: none;
     }
 }

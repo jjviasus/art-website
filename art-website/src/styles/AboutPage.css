@@ -1,15 +1,14 @@
 /* About Page Styles */
 .about-page-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     margin-left: 220px;
 }
 
 .about-page-container img {
     max-width: 50%;
     max-height: 50%;
-    width: auto;
-    height: auto;
     border-radius: 3px;
 }
 
@@ -22,11 +21,16 @@
     margin-top: 16px;
 }
 
+.about-page-header {
+    margin-top: 32px;
+    width: 100%;
+    text-align: left;
+}
+
 /* Media Queries */
 @media screen and (max-width: 576px) {
     /* Apply these when the screen size is below 576px */
     .about-page-container {
-        flex-direction: column;
         margin: 0 16px 0 16px;
     }
 

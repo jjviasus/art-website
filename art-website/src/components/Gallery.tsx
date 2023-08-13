@@ -26,7 +26,7 @@ export function Gallery({selectedCategory}: GalleryProps) {
                 <div className="gallery-column" key={columnIndex}>
                     {column.map((image) => (
                         <div className="gallery-column-content" key={image.id}>
-                            <Link to={`/paintings/${image.id}`}>
+                            <Link to={`/paintings/${image.id}`} className="gallery-column-content-link">
                                 <img
                                     src={image.src}
                                     alt={image.alt}
