@@ -123,3 +123,18 @@
         z-index: 1; /* Ensure the header stays on top of other content */
     }
 }
+
+@media screen and (max-height: 568px) {
+    /* Apply these when the screen height is below 568px */
+    .desktop-nav-bar-artist-name {
+        display: none;
+    }
+
+    .desktop-nav-bar-bottom-row {
+        display: none;
+    }
+
+    .desktop-nav-bar {
+        top: 0;
+    }
+}
