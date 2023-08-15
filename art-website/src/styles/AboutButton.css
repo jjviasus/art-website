@@ -1,3 +1,7 @@
+.aboutButton {
+    display: none; /* when bio is complete remove this */
+}
+
 .aboutButton .row:hover {
     transform: translateY(-5px);
     transition: transform 0.15s ease;

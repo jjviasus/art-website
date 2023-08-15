@@ -1,6 +1,6 @@
 import React from 'react';
 import {useParams, Link} from 'react-router-dom';
-import '../styles/IndividualPaiting.css';
+import '../styles/IndividualPainting.css';
 import imageData from '../data/paintingData';
 import leftArrow from '../assets/icons/left-arrow.svg';
 import rightArrow from '../assets/icons/right-arrow.svg';
@@ -44,7 +44,7 @@ export function IndividualPainting({selectedCategory}: IndividualPaintingProps) 
                     <img src={leftArrow} alt="Left arrow"/>
                 </Link>
                 <div className="individual-painting-container-content">
-                    <div className="title font-inria-serif-bold black-text">
+                    <div className="font-inria-serif-bold black-text">
                         {painting.alt}
                     </div>
                     <img src={painting.src} alt="" key=""/>
