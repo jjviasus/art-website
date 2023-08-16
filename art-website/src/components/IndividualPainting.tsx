@@ -44,11 +44,11 @@ export function IndividualPainting({selectedCategory}: IndividualPaintingProps) 
                     <img src={leftArrow} alt="Left arrow"/>
                 </Link>
                 <div className="individual-painting-container-content">
-                    <div className="font-inria-serif-bold black-text">
+                    <img src={painting.src} alt="" key=""/>
+                    <div className="title font-inria-serif-bold-sm black-text">
                         {painting.alt}
                     </div>
-                    <img src={painting.src} alt="" key=""/>
-                    <div className="font-inria-serif-light dark-gray-text">
+                    <div className="font-inria-serif-light-sm dark-gray-text">
                         {painting.dimensions}, {painting.medium},{' '}
                         {painting.surface_material}, {painting.year}
                     </div>
