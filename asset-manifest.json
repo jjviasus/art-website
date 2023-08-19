@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.ce39b8b3.css",
-    "main.js": "/static/js/main.43234bd1.js",
+    "main.css": "/static/css/main.ec501241.css",
+    "main.js": "/static/js/main.b3b9a9ec.js",
     "static/media/IMG_1911.jpg": "/static/media/IMG_1911.bcadb5911692947a0dca.jpg",
     "static/media/kind_of_blue.jpg": "/static/media/kind_of_blue.fc6aea7c95a0af267c11.jpg",
     "static/media/a_fragile_delight.jpg": "/static/media/a_fragile_delight.0cd97a0143e0c4e6b2a5.jpg",
@@ -22,6 +22,7 @@
     "static/media/ensemble.jpg": "/static/media/ensemble.bc7cf68de4032b0b85cf.jpg",
     "static/media/fresh_fruit_delight.jpg": "/static/media/fresh_fruit_delight.385a6dafb644511433bb.jpg",
     "static/media/freshly_squeezed.jpg": "/static/media/freshly_squeezed.de46bdf049dac0b764f0.jpg",
+    "static/media/rotary_retro.jpg": "/static/media/rotary_retro.8e84ba504c3c35ac1524.jpg",
     "static/media/memories_of_mom.jpg": "/static/media/memories_of_mom.d244a4619155a33cc069.jpg",
     "static/media/my_cup_of_tea.jpg": "/static/media/my_cup_of_tea.bf1a58e41200107718fd.jpg",
     "static/media/homegrown_tomatoes.jpg": "/static/media/homegrown_tomatoes.927761c48ef6d1d1f1cd.jpg",
@@ -36,7 +37,6 @@
     "static/media/quince_blossoms_and_two_vases.jpg": "/static/media/quince_blossoms_and_two_vases.1c5769262fe4f6e8404d.jpg",
     "static/media/yellow_leaf_mulberry_tree.jpg": "/static/media/yellow_leaf_mulberry_tree.b76cb9fe91a146b8778c.jpg",
     "static/media/mt_diablo_ca_challenge.jpg": "/static/media/mt_diablo_ca_challenge.ccf1278e27bd19adbf14.jpg",
-    "static/media/rotary_retro.jpg": "/static/media/rotary_retro.c93937668c57ba4753de.jpg",
     "static/media/instagram.svg": "/static/media/instagram.fd7e776cc3dd7fdcf31a202d3b07b2c1.svg",
     "static/media/email2.svg": "/static/media/email2.cc2550e59d214d4435a77cb53fcc1c9b.svg",
     "static/media/left-arrow.svg": "/static/media/left-arrow.1a4bac08e9e5195ec21807ba0de14575.svg",
@@ -44,11 +44,11 @@
     "static/media/right-arrow.svg": "/static/media/right-arrow.1a56c9647dd0fc748fce83ed839e0d2e.svg",
     "index.html": "/index.html",
     "static/media/times-solid.svg": "/static/media/times-solid.26dc19308227ef179bc489a7f5a595f8.svg",
-    "main.ce39b8b3.css.map": "/static/css/main.ce39b8b3.css.map",
-    "main.43234bd1.js.map": "/static/js/main.43234bd1.js.map"
+    "main.ec501241.css.map": "/static/css/main.ec501241.css.map",
+    "main.b3b9a9ec.js.map": "/static/js/main.b3b9a9ec.js.map"
   },
   "entrypoints": [
-    "static/css/main.ce39b8b3.css",
-    "static/js/main.43234bd1.js"
+    "static/css/main.ec501241.css",
+    "static/js/main.b3b9a9ec.js"
   ]
 }
