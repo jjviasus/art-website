@@ -25,6 +25,13 @@ import hyacinths_and_daffodils from "../assets/paintings/hyacinths_and_daffodils
 import morning_daffodils from "../assets/paintings/morning_daffodils.jpg";
 import lemons_and_a_pitcher from "../assets/paintings/lemons_and_a_pitcher.jpg";
 import yellow_and_crimson from "../assets/paintings/yellow_and_crimson.jpg";
+import mt_diablo_ca_challenge from "../assets/paintings/mt_diablo_ca_challenge.jpg";
+import winter_in_penticton_bc from "../assets/paintings/winter_in_penticton_bc.jpg";
+import winter_in_bc_2 from "../assets/paintings/winter_in_bc_2.jpg";
+import backyard_with_red_maple_and_boat from "../assets/paintings/backyard_with_red_maple_and_boat.jpg";
+import yellow_leaf_mulberry_tree from "../assets/paintings/yellow_leaf_mulberry_tree.jpg";
+import twilight_on_warren_st from "../assets/paintings/twilight_on_warren_st.jpg";
+import homegrown_tomatoes from "../assets/paintings/homegrown_tomatoes.jpg";
 
 export interface PaintingData {
     id: number;
@@ -306,6 +313,81 @@ const imageData: PaintingData[] = [
         surface_material: "Acrylic",
         medium: "Canvas",
         dimensions: "11\" x 14\"",
+        year: "2023",
+    },
+    {
+        id: 28,
+        src: mt_diablo_ca_challenge,
+        alt: "Mt Diablo, CA Challenge",
+        categories: ["all", "landscape"],
+        surface_material: "Acrylic",
+        medium: "Paper",
+        dimensions: "8\" x 6\"",
+        year: "2023",
+    },
+    {
+        id: 29,
+        src: winter_in_penticton_bc,
+        alt: "Winter in Penticton, BC",
+        categories: ["all", "landscape"],
+        surface_material: "Acrylic",
+        medium: "Paper",
+        dimensions: "8\" x 6\"",
+        year: "2023",
+    },
+    {
+        id: 30,
+        src: winter_in_bc_2,
+        alt: "Winter in BC #2",
+        categories: ["all", "landscape"],
+        surface_material: "Acrylic",
+        medium: "Paper",
+        dimensions: "8\" x 6\"",
+        year: "2023",
+    },
+    {
+        id: 31,
+        src: backyard_with_red_maple_and_boat,
+        alt: "Backyard with Red Maple and Boat",
+        categories: ["all", "landscape"],
+        surface_material: "Acrylic",
+        medium: "Paper",
+        dimensions: "6\" x 6\"",
+        year: "2023",
+    },
+    {
+        id: 32,
+        src: yellow_leaf_mulberry_tree,
+        alt: "Yellow Leaf Mulberry Tree",
+        categories: ["all", "landscape"],
+        surface_material: "Acrylic",
+        medium: "Paper",
+        dimensions: "6\" x 6\"",
+        year: "2023",
+    },
+    {
+        id: 33,
+        src: twilight_on_warren_st,
+        alt: "Twilight on Warren St",
+        categories: ["all", "landscape"],
+        surface_material: "Acrylic",
+        medium: "Paper",
+        dimensions: "6\" x 6\"",
+        year: "2023",
+    },
+    // Homegrown Tomato’s
+    // Still life
+    // Acrylic
+    // Wooden Cradle Board
+    // 6” x 6”
+    {
+        id: 34,
+        src: homegrown_tomatoes,
+        alt: "Homegrown Tomatoes",
+        categories: ["all", "still life"],
+        surface_material: "Acrylic",
+        medium: "Wooden Cradle Board",
+        dimensions: "6\" x 6\"",
         year: "2023",
     }
 ];

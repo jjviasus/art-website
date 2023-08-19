@@ -29,13 +29,13 @@ export function Categories({selectedCategory, onSelectCategory}: CategoriesProps
             >
                 still life
             </Link>
-            {/*<Link*/}
-            {/*  className={`row gray-text font-abel ${selectedCategory === "landscape" ? "selected-category" : ""}`}*/}
-            {/*  onClick={() => handleCategoryClick("landscape")}*/}
-            {/*  to="/landscape"*/}
-            {/*>*/}
-            {/*  landscape*/}
-            {/*</Link>*/}
+            <Link
+              className={`row gray-text font-abel ${selectedCategory === "landscape" ? "selected-category" : ""}`}
+              onClick={() => handleCategoryClick("landscape")}
+              to="/landscape"
+            >
+              landscape
+            </Link>
             <Link
                 className={`row gray-text font-abel ${selectedCategory === "portrait" ? "selected-category" : ""}`}
                 onClick={() => handleCategoryClick("portrait")}
