@@ -375,11 +375,6 @@ const imageData: PaintingData[] = [
         dimensions: "6\" x 6\"",
         year: "2023",
     },
-    // Homegrown Tomato’s
-    // Still life
-    // Acrylic
-    // Wooden Cradle Board
-    // 6” x 6”
     {
         id: 34,
         src: homegrown_tomatoes,

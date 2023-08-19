@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Route, Routes, useNavigate} from "react-router-dom";
+import {Route, Routes, useLocation, useNavigate} from "react-router-dom";
 import './global.css';
 import "./styles/App.css"
 import {AboutButton, Categories, Socials} from './components';
@@ -13,17 +13,36 @@ function App() {
     const [selectedCategory, setSelectedCategory] = useState("all"); // Initial "all"
     const [isNavOpen, setIsNavOpen] = useState(false); // State to manage the navigation panel
     let navigate = useNavigate();
+    const location = useLocation();
 
     useEffect(() => {
+        /* Remove this to get rid of animation */
         fadeInAnimation({selectors: '.gallery-column img'});
     }, [])
 
     useEffect(() => {
-        console.log('navigate')
+        if (location.pathname === '/') {
+            setSelectedCategory('all')
+        } else if (location.pathname === '/still-life') {
+            setSelectedCategory('still life')
+        } else if (location.pathname === '/landscape') {
+            setSelectedCategory('landscape')
+        } else if (location.pathname === '/portrait') {
+            setSelectedCategory('portrait')
+        } else if (location.pathname === '/floral') {
+            setSelectedCategory('floral')
+        } else if (location.pathname === '/about') {
+            setSelectedCategory('about')
+        }
+    }, [location])
+
+    useEffect(() => {
+        /* Remove this to get rid of animation */
         fadeInAnimation({selectors: '.gallery-column img'});
     }, [navigate])
 
     useEffect(() => {
+        /* Remove this to get rid of animation */
         fadeInAnimation({selectors: '.gallery-column img'});
     }, [selectedCategory]);
 
@@ -38,6 +57,7 @@ function App() {
 
     const handleCategoryClick = (category: string) => {
         if (category === selectedCategory) {
+            /* Remove this to get rid of animation */
             fadeInAnimation({selectors: '.gallery-column img'});
         } else {
             setSelectedCategory(category);
