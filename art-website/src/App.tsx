@@ -6,7 +6,6 @@ import {AboutButton, Categories, Socials} from './components';
 import {fadeInAnimation} from './animations/FadeInAnimation';
 import {AboutPage} from "./components/AboutPage";
 import {Gallery, IndividualPainting} from "./components";
-import hamburger from "./assets/icons/bars-solid.svg";
 import closeIcon from "./assets/icons/times-solid.svg";
 
 function App() {
@@ -65,8 +64,8 @@ function App() {
         setIsNavOpen(false);
     }
 
-    // Function to handle hamburger icon click
-    const handleHamburgerClick = () => {
+    // Function to handle menu button click
+    const handleMenuClick = () => {
         setIsNavOpen((prev) => !prev);
     };
 
@@ -76,12 +75,7 @@ function App() {
                 <div className="black-text font-inria-serif">Deborah</div>
                 <div className="black-text font-inria-serif">Fanara</div>
                 <div className="black-text smaller-text font-kristi">art</div>
-                <img
-                    className="hamburger"
-                    src={hamburger}
-                    alt="hamburger"
-                    onClick={handleHamburgerClick}
-                />
+                <div className="gray-text mobile-menu-btn font-inria-serif-light" onClick={handleMenuClick}>Menu</div>
             </div>
             <div className={`mobile-nav-bar ${isNavOpen ? "open" : ""}`}>
                 <div className="mobile-nav-close-btn" onClick={() => setIsNavOpen(false)}>
