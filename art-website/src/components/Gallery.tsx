@@ -2,6 +2,7 @@ import React from "react";
 import imageData, {PaintingData} from "../data/paintingData";
 import '../styles/Gallery.css';
 import {Link} from "react-router-dom";
+import ImageComponent from "./ImageComponent";
 
 interface GalleryProps {
     selectedCategory: string;
@@ -27,10 +28,7 @@ export function Gallery({selectedCategory}: GalleryProps) {
                     {column.map((image) => (
                         <div className="gallery-column-content" key={image.id}>
                             <Link to={`/paintings/${image.id}`} className="gallery-column-content-link">
-                                <img
-                                    src={image.src}
-                                    alt={image.alt}
-                                />
+                                <ImageComponent image={image}/>
                             </Link>
                             <div className="gallery-column-title-mobile font-inria-serif-bold-sm black-text">
                                 {image.alt}
