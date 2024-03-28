@@ -42,6 +42,7 @@ export interface PaintingData {
     medium: string;
     dimensions: string;
     year: string;
+    blurhash: string;
 }
 
 const imageData: PaintingData[] = [
@@ -54,6 +55,7 @@ const imageData: PaintingData[] = [
         medium: "Acrylic",
         dimensions: "6\" x 6\"",
         year: "2023",
+        blurhash: "LNI;n,?H?HtSUGaxW=xu}@D*xFjZ"
     },
     {
         id: 2,
@@ -64,6 +66,7 @@ const imageData: PaintingData[] = [
         medium: "Acrylic",
         dimensions: "6\" x 6\"",
         year: "2023",
+        blurhash: "LEEWH~?b?9i^LNNdNHfRx-WBE9W?"
     },
     {
         id: 3,
@@ -74,6 +77,7 @@ const imageData: PaintingData[] = [
         medium: "Acrylic",
         dimensions: "6\" x 6\"",
         year: "2023",
+        blurhash: "LLHn{SxsIpR*0;M}Ips.58bF-on*"
     },
     {
         id: 4,
@@ -84,6 +88,7 @@ const imageData: PaintingData[] = [
         medium: "Paper",
         dimensions: "6\" x 6\"",
         year: "2023",
+        blurhash: "LGHA|g]M7eK002xvD*9^9tg4-nw]"
     },
     {
         id: 5,
@@ -94,6 +99,7 @@ const imageData: PaintingData[] = [
         medium: "Paper",
         dimensions: "9\" x 12\"",
         year: "2023",
+        blurhash: "LDG[r]^^xTN1u6NLNMoh+uM,jxWV"
     },
     {
         id: 6,
@@ -104,6 +110,7 @@ const imageData: PaintingData[] = [
         medium: "Paper",
         dimensions: "12\" x 9\"",
         year: "2023",
+        blurhash: "LSF$5|WXD+M}0LbbNIoME3oLxatO"
     },
     {
         id: 7,
@@ -114,6 +121,7 @@ const imageData: PaintingData[] = [
         medium: "Paper",
         dimensions: "8\" x 6\"",
         year: "2023",
+        blurhash: "LEG[o#0NIQJDyFxVITx@NVjKtAxU"
     },
     {
         id: 8,
@@ -124,6 +132,7 @@ const imageData: PaintingData[] = [
         medium: "Canvas",
         dimensions: "12\" x 9\"",
         year: "2023",
+        blurhash: "LNFOJpWFOsbw0fs8MxR*KQkq%1w^"
     },
     {
         id: 9,
@@ -134,6 +143,7 @@ const imageData: PaintingData[] = [
         medium: "Canvas",
         dimensions: "9\" x 12\"",
         year: "2023",
+        blurhash: "LTHB*w%2-PRo0OxuNIof-TofRlxt"
     },
     {
         id: 10,
@@ -144,6 +154,7 @@ const imageData: PaintingData[] = [
         medium: "Canvas",
         dimensions: "9\" x 12\"",
         year: "2023",
+        blurhash: "L9G84ZEy%hwv58-:^h.6_LsSE4bc"
     },
     {
         id: 11,
@@ -154,6 +165,7 @@ const imageData: PaintingData[] = [
         medium: "Canvas panel",
         dimensions: "12\" x 9\"",
         year: "2023",
+        blurhash: "LVFr9PxaIUIV0$t7R-NH$ee.xtxt"
     },
     {
         id: 12,
@@ -164,6 +176,7 @@ const imageData: PaintingData[] = [
         medium: "Canvas panel",
         dimensions: "9\" x 12\"",
         year: "2023",
+        blurhash: "LGINm^_4,2MyM;f,#tVf^FVsShtl"
     },
     {
         id: 13,
@@ -174,6 +187,7 @@ const imageData: PaintingData[] = [
         medium: "Paper",
         dimensions: "9\" x 12\"",
         year: "2023",
+        blurhash: "LKFh@,%P%1s7~9M^xYni%$JCt7M{"
     },
     {
         id: 14,
@@ -184,6 +198,7 @@ const imageData: PaintingData[] = [
         medium: "Paper",
         dimensions: "6\" x 6\"",
         year: "2023",
+        blurhash: "LNJ@|1?a~qM|%MNa%MjGniflRjoL"
     },
     {
         id: 15,
@@ -194,6 +209,7 @@ const imageData: PaintingData[] = [
         medium: "Canvas",
         dimensions: "8\" x 8\"",
         year: "2023",
+        blurhash: "LEFrV9~U,+-o~A$yE3s;$fK5nlM{"
     },
     {
         id: 16,
@@ -204,6 +220,7 @@ const imageData: PaintingData[] = [
         medium: "Paper",
         dimensions: "8\" x 6\"",
         year: "2023",
+        blurhash: "LBJk1H^T?0=aPrD*XNtk?ITAotEg"
     },
     {
         id: 17,
@@ -214,6 +231,7 @@ const imageData: PaintingData[] = [
         medium: "Paper",
         dimensions: "6\" x 8\"",
         year: "2023",
+        blurhash: "LCI|zKx,^i9G1QH[n,I;{0aJ$f.7"
     },
     {
         id: 18,
@@ -224,6 +242,7 @@ const imageData: PaintingData[] = [
         medium: "Canvas panel",
         dimensions: "6\" x 6\"",
         year: "2023",
+        blurhash: "LAB|]4M_yCR5yrRkRjR+8^t6xUx]"
     },
     {
         id: 19,
@@ -234,6 +253,7 @@ const imageData: PaintingData[] = [
         medium: "Canvas panel",
         dimensions: "6\" x 6\"",
         year: "2023",
+        blurhash: "LGF5:PE4~VIpNSxubKt6^--oM}WA"
     },
     {
         id: 20,
@@ -244,6 +264,7 @@ const imageData: PaintingData[] = [
         medium: "Wooden Cradle Board",
         dimensions: "6\" x 6\"",
         year: "2023",
+        blurhash: "LDHKUn9]}=tQ.i%1-Tfh]j?EIpwb"
     },
     {
         id: 21,
@@ -254,6 +275,7 @@ const imageData: PaintingData[] = [
         medium: "Wooden Cradle Board",
         dimensions: "6\" x 6\"",
         year: "2023",
+        blurhash: "LEE{zt^PC49t01D*Mext5Qt,VEni"
     },
     {
         id: 22,
@@ -264,6 +286,7 @@ const imageData: PaintingData[] = [
         medium: "Canvas",
         dimensions: "10\" x 10\"",
         year: "2023",
+        blurhash: "LIHe8^9}Shac4SrrxZoH}[jFX8t5"
     },
     {
         id: 23,
@@ -274,6 +297,7 @@ const imageData: PaintingData[] = [
         medium: "Wooden Panel",
         dimensions: "6\" x 6\"",
         year: "2023",
+        blurhash: "LDI##~RQB@-oK,%1O]w[,nXUR3RP"
     },
     {
         id: 24,
@@ -284,6 +308,7 @@ const imageData: PaintingData[] = [
         medium: "Wooden Panel",
         dimensions: "6\" x 6\"",
         year: "2023",
+        blurhash: "LIJHja}+n$0eOu?XxF$e#RxWtQXB"
     },
     {
         id: 25,
@@ -294,6 +319,7 @@ const imageData: PaintingData[] = [
         medium: "Canvas",
         dimensions: "8\" x 10\"",
         year: "2023",
+        blurhash: "LDIE@69FF$,,tvo#nfr]}tbvIuxC"
     },
     {
         id: 26,
@@ -304,6 +330,7 @@ const imageData: PaintingData[] = [
         medium: "Canvas",
         dimensions: "8\" x 8\"",
         year: "2023",
+        blurhash: "LLG[J]IVRWog0kR-oIX5^k-oIqs9"
     },
     {
         id: 27,
@@ -314,6 +341,7 @@ const imageData: PaintingData[] = [
         medium: "Canvas",
         dimensions: "11\" x 14\"",
         year: "2023",
+        blurhash: "LMJaDWE2Dko}~lV{nPt7xbn+oajZ"
     },
     {
         id: 28,
@@ -324,6 +352,7 @@ const imageData: PaintingData[] = [
         medium: "Paper",
         dimensions: "8\" x 6\"",
         year: "2023",
+        blurhash: "LMEyD6R%I[ax16rqt7WBqtniNGae"
     },
     {
         id: 29,
@@ -334,6 +363,7 @@ const imageData: PaintingData[] = [
         medium: "Paper",
         dimensions: "8\" x 6\"",
         year: "2023",
+        blurhash: "LMDv=:M_MxRPyGs:oJt7IqWZxZof"
     },
     {
         id: 30,
@@ -344,6 +374,7 @@ const imageData: PaintingData[] = [
         medium: "Paper",
         dimensions: "8\" x 6\"",
         year: "2023",
+        blurhash: "LKEWau?wDga#EnfAaIWB%Oo}ofV@"
     },
     {
         id: 31,
@@ -354,6 +385,7 @@ const imageData: PaintingData[] = [
         medium: "Paper",
         dimensions: "6\" x 6\"",
         year: "2023",
+        blurhash: "LNF=pt8x?bIV#HwGkWsmFXs,WEsl"
     },
     {
         id: 32,
@@ -364,6 +396,7 @@ const imageData: PaintingData[] = [
         medium: "Paper",
         dimensions: "6\" x 6\"",
         year: "2023",
+        blurhash: "LBDviv?tMotS|9?GR*W@GQMyR+NM"
     },
     {
         id: 33,
@@ -374,6 +407,7 @@ const imageData: PaintingData[] = [
         medium: "Paper",
         dimensions: "6\" x 6\"",
         year: "2023",
+        blurhash: "LCA107EUt7xuglXB%0kDD%RiRjRj"
     },
     {
         id: 34,
@@ -384,6 +418,7 @@ const imageData: PaintingData[] = [
         medium: "Wooden Cradle Board",
         dimensions: "6\" x 6\"",
         year: "2023",
+        blurhash: "LLH-oFghSiWB~JSdVtxHYLi|V[Vt"
     }
 ];
 
