@@ -1,16 +1,18 @@
 import React from "react";
-import imageData, {PaintingData} from "../data/paintingData";
+import imageData, { PaintingData } from "../data/paintingData";
 import '../styles/Gallery.css';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import { sortPaintings } from '../utils';
+
 
 interface GalleryProps {
     selectedCategory: string;
 }
 
-export function Gallery({selectedCategory}: GalleryProps) {
+export function Gallery({ selectedCategory }: GalleryProps) {
     // Filter the ImageData based on the selected category
-    const filteredImages: PaintingData[] = imageData.filter((image) =>
-        image.categories.includes(selectedCategory)
+    const filteredImages: PaintingData[] = sortPaintings(
+        imageData.filter(p => p.categories.includes(selectedCategory))
     );
 
     // Create three columns and populate them

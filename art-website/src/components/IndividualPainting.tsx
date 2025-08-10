@@ -1,9 +1,10 @@
 import React from 'react';
 import {useParams, Link} from 'react-router-dom';
 import '../styles/IndividualPainting.css';
-import imageData from '../data/paintingData';
+import imageData, { PaintingData } from "../data/paintingData";
 import leftArrow from '../assets/icons/left-arrow.svg';
 import rightArrow from '../assets/icons/right-arrow.svg';
+import { sortPaintings } from '../utils';
 
 interface IndividualPaintingProps {
     selectedCategory: string;
@@ -20,7 +21,9 @@ export function IndividualPainting({selectedCategory}: IndividualPaintingProps) 
     const paintingId = parseInt(id);
 
     // Filter paintings that belong to the same category as the current painting
-    const filteredPaintings = imageData.filter(painting => painting.categories.includes(selectedCategory));
+    const filteredPaintings: PaintingData[] = sortPaintings(
+        imageData.filter(p => p.categories.includes(selectedCategory))
+    );
 
     const currentIndex = filteredPaintings.findIndex((painting) => painting.id === paintingId);
 

@@ -64,6 +64,13 @@ export function Categories({selectedCategory, onSelectCategory}: CategoriesProps
             {/*>*/}
             {/*  interior*/}
             {/*</Link>*/}
+            <Link
+                className={`row gray-text font-abel ${selectedCategory === "animals" ? "selected-category" : ""}`}
+                onClick={() => handleCategoryClick("animals")}
+                to="/animals"
+            >
+                animals
+            </Link>
         </div>
     );
 }

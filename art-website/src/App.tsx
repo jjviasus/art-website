@@ -30,6 +30,8 @@ function App() {
             setSelectedCategory('portrait')
         } else if (location.pathname === '/floral') {
             setSelectedCategory('floral')
+        } else if (location.pathname === '/animals') {
+            setSelectedCategory('animals')
         } else if (location.pathname === '/about') {
             setSelectedCategory('about')
         }
@@ -120,7 +122,8 @@ function App() {
                 <Route path="/portrait" element={<Gallery selectedCategory={"portrait"}/>}/>
                 <Route path="/figure" element={<Gallery selectedCategory={"figure"}/>}/>
                 <Route path="/floral" element={<Gallery selectedCategory={"floral"}/>}/>
-                <Route path="/interior" element={<Gallery selectedCategory={"interior"}/>}/>
+                <Route path="/animals" element={<Gallery selectedCategory={"animals"}/>}/>
+                {/* <Route path="/interior" element={<Gallery selectedCategory={"interior"}/>}/> */}
                 <Route path="/about" element={<AboutPage/>}/>
                 <Route path="/paintings/:id" element={<IndividualPainting selectedCategory={selectedCategory}/>}/>
             </Routes>
